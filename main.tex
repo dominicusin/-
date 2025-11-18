@@ -1,0 +1,1327 @@
+\input{stfi_2022arx.utf8.sty}
+
+
+
+% Вслучае необходимости, здесь можно вставить ТОЛЬКО самые необходимые пакеты 
+% (не надо подключать все подряд)
+\usepackage{graphicx}
+
+\setlength{\headheight}{14.0pt}
+\begin{document}
+%%% Классификаторы. УДК. PACS (не более 3).
+\UDK{000.000, 000.000} % Проставляет АВТОР!!!
+\PACS{00.00, 00.00} % Проставляет АВТОР!!!
+
+\Title%%%%	Названия статьи (все название статьи КАПСОМ писать не нужно)
+	{Краткое Название статьи на русском языке} % Краткое Название статьи на русском языке для колонтитулов
+	{Название статьи на русском языке} % Название статьи на русском языке 
+	{Title of the article in English} % Название статьи  на английском языке
+
+\Grant{Здесь Вы указываете <<свои>> гранты. Работа поддержана РФФИ (грант № 00--00--12345). Если работа не поддержана грантами, эту строку стереть.} % В конце ставится точка.
+
+\Abstract% 	
+{\hyphenpenalty=10000
+Аннотация статьи на русском. Представляет собой полноценный реферат статьи. Нельзя использовать ссылки на литературу в аннотации. Допустимы математические формулы в ``чистом'' latex-e. Рекомендуемый объем 100-250 слов.
+
+}%
+{\hyphenpenalty=10000
+Abstract of the article in English. Abstract of the article in English. Abstract of the article in English. Abstract of the article in English. Abstract of the article in English. Abstract of the article in English.
+	
+}
+
+%%% Ключевые слова на русском и английском языках (не более 10 слов).
+\Key%		
+  {Ключевые слова на русском и английском языках (не более 10 слов)}% точку в конце не ставить
+  {Keywords in English (no more than 10 words)}% точку в конце не ставить
+
+%%%	Информация о первом авторе:
+%%% В контактной информации об авторе указывается:
+%%% Электронная почта
+%%% Фамилия, Имя, Отчество (обязательно полностью), ученая степень (по желанию),
+%%% ученое звание (по желанию), должность (обязательно), место работы (обязательно)
+%%% не обязательно подробно (кафедра, факультет, отдел), достаточно лишь название организации,
+%%% адрес организации (обязательно) -  улица, дом, город, индекс, страна, ,.
+%%% Не нужно указывать домашний адрес, нужно указывать рабочий адрес!!!
+
+\Author%
+{И.\,И.~Иванов} % обратите внимание, как оформлены инициалы и пробел перед фамилией
+{\textbf{Иванов Иван Иванович}, к.ф.-м.н., доцент,  первый университет, ул. Такая, д. 00, г. Первый, 000000, Россия.}
+{email@mail.ru} % E-mail
+{I.\,I.~Ivanov}% обратите внимание, как оформлены инициалы и пробел перед фамилией
+{\textbf{Ivanov Ivan Ivanovich}, Ph.D., Associate Professor, First University, Takaya st., 00, First-City, 000000, Russia.}
+{a} % индексы для аффилиации
+%{a,b} если два места работы, то пишется два индекса для каждой аффилиации
+{1} %первый автор, поэтому пишем номер: 1
+
+%	второй автор, а затем и последующие авторы аналогично первому (если есть):
+\Author%
+{П.\,П.~Петров}% обратите внимание, как оформлены инициалы и пробел перед фамилией
+{\textbf{Петров Петр Петрович}, к.ф.-м.н., профессор,  второй университет, ул. Другая, д. 01, г. Новый, 012340, Россия; доцент, первый университет, ул. Такая, д. 00, г. Первый, 000000, Россия.}
+{email2@inbox.ru} % E-mail второго автора
+{P.\,P.~Petrov} % обратите внимание, как оформлены инициалы и пробел перед фамилией
+{\textbf{Petrov Petr Petrovich}, Ph.D., Professor, Second University, Another st., 01, New-City, 012340, Russia; Associate Professor, First University, Takaya st., 00, First-City, 000000, Russia.}
+{b,a} %если два места работы, то пишется два индекса для каждой аффилиации
+{2} %второй автор, поэтому пишем номер: 2 (и так для каждого автора)
+
+%%%	Список аффилиаций:
+\affili {a} % символ индекса первой аффилиации
+				{первый университет, г. Первый, 000000, Россия.}% на русском языке
+				{First University, First-City, 000000, Russia.}% на английском языке
+\affili {b} % символ индекса  второй аффилиации
+				{второй университет, г. Новый, 012340, Россия.} % на русском языке
+				{Second University,  New-City, 012340, Russia.} % на английском языке
+
+%%%	Проставляет редактор!!!!!!:
+\DOI {00.000000/issn2226-8812.0000.0.0-00}
+
+%%% Здесь могут быть "свои" макрокоманды, например так
+\newcommand{\pX}{{\mathcal X}}
+\let\msf=\mathsf
+\newcommand{\var}{\mathop{\sf Var}}
+%%% однако их количество не должно быть большим.
+%%% здесь нельзя вставлять сокращения, которые не используются.
+
+
+
+%%% Шапка оформления НЕ ТРОГАТЬ!!! %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\Header
+	\captionsenglish
+	\SubHeader
+	\captionsrussian
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Введение}
+\section{Название первого раздела}
+
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.9.9
+% see http://writer2latex.sourceforge.net for more info
+\documentclass{article}
+\usepackage{calc,amsmath,amssymb,amsfonts}
+\usepackage[T2A,LGR,T1]{fontenc}
+\usepackage[russian,greek,english]{babel}
+\usepackage[style=numeric,backend=biber]{biblatex}
+\usepackage{array,supertabular,hhline,graphicx}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+\newcounter{Equation}[section]
+\renewcommand\theEquation{\thesection.\arabic{Equation}}
+\date{2025-11-18}
+\begin{document}
+\section[\textcyrillic{П}\textcyrillic{р}\textcyrillic{о}\textcyrillic{е}\textcyrillic{к}\textcyrillic{т}\textcyrillic{и}\textcyrillic{в}\textcyrillic{н}\textcyrillic{о}{}-\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{а}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{н}\textcyrillic{а}\textcyrillic{я}
+\textcyrillic{о}\textcyrillic{н}\textcyrillic{т}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{г}\textcyrillic{и}\textcyrillic{я}
+\textcyrillic{о}\textcyrillic{б}\textcyrillic{р}\textcyrillic{а}\textcyrillic{з}\textcyrillic{а}
+\textcyrillic{В}.\textcyrillic{С}.
+\textcyrillic{С}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ь}\textcyrillic{ё}\textcyrillic{в}\textcyrillic{а}
+\textcyrillic{в}
+\textcyrillic{к}\textcyrillic{р}\textcyrillic{и}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{с}\textcyrillic{т}\textcyrillic{а}\textcyrillic{т}\textcyrillic{ь}\textcyrillic{е}
+\textcyrillic{Д}.\textcyrillic{С}.
+\textcyrillic{М}\textcyrillic{е}\textcyrillic{р}\textcyrillic{е}\textcyrillic{ж}\textcyrillic{к}\textcyrillic{о}\textcyrillic{в}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}
+$\text{\textgreek{«}}$\textcyrillic{Н}\textcyrillic{е}\textcyrillic{м}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{о}\textcyrillic{р}\textcyrillic{о}\textcyrillic{к}$\text{\textgreek{»}}$:
+\textcyrillic{о}\textcyrillic{п}\textcyrillic{ы}\textcyrillic{т}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{и}\textcyrillic{м}\textcyrillic{е}\textcyrillic{н}\textcyrillic{е}\textcyrillic{н}\textcyrillic{и}\textcyrillic{я}
+\textcyrillic{ф}\textcyrillic{о}\textcyrillic{р}\textcyrillic{м}\textcyrillic{а}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{н}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}
+\textcyrillic{а}\textcyrillic{п}\textcyrillic{п}\textcyrillic{а}\textcyrillic{р}\textcyrillic{а}\textcyrillic{т}\textcyrillic{а}
+\textcyrillic{к}
+\textcyrillic{л}\textcyrillic{и}\textcyrillic{т}\textcyrillic{е}\textcyrillic{р}\textcyrillic{а}\textcyrillic{т}\textcyrillic{у}\textcyrillic{р}\textcyrillic{н}\textcyrillic{о}{}-\textcyrillic{к}\textcyrillic{р}\textcyrillic{и}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{м}\textcyrillic{у}
+\textcyrillic{д}\textcyrillic{и}\textcyrillic{с}\textcyrillic{к}\textcyrillic{у}\textcyrillic{р}\textcyrillic{с}\textcyrillic{у}]{\textcyrillic{Проективно-модальная
+онтология образа В.С. Соловьёва в критической статье Д.С. Мережковского $\text{\textgreek{«}}$Немой
+пророк$\text{\textgreek{»}}$: опыт применения формального аппарата к литературно-критическому дискурсу}}
+\textcyrillic{Е.Г. Луговская, Е.К. Грудина}
+
+
+\bigskip
+
+\textcyrillic{В статье предложена проективно-модальная реконструкция образа В.С. Соловьёва в критической статье
+$\text{\textgreek{«}}$Немой пророк$\text{\textgreek{»}}$ из сборника Д.С. Мережковского $\text{\textgreek{«}}$В тихом
+омуте$\text{\textgreek{»}}$ на основе аппарата Проективно-модальной онтологии (ПМО) В.И. Моисеева. Критический метод
+Мережковского быть формализован как систематическое варьирование модуса личности философа на множестве темпоральных,
+онтологических и эпистемологических моделей с выявлением собственных и несобственных моделей. Установлено, что базовый
+модус Соловьёва идентифицируется Мережковским не как нейтральный субъект, но как имманентно гностический
+(созерцательный), что делает революционный прагматизм несобственной моделью, на которой проектор не может образовать
+моду. Трагедия $\text{\textgreek{«}}$немого пророка$\text{\textgreek{»}}$ интерпретируется как онтологическая апория,
+возникающая из структурной невозможности образования аутентичной моды на модели исторического действия при
+одновременной невыразимости истинной (профетической) моды в публичном дискурсе. Темпоральная архитектоника образа
+описывается через триаду собственных моделей: прошлое (реставраторство), настоящее (консервация), эсхатологическое
+будущее (страх антихриста). Метафора $\text{\textgreek{«}}$омута$\text{\textgreek{»}}$ реинтерпретируется не как
+актуальный синтез противоположностей, но как эсхатологический горизонт слияния, недостижимый в конечном времени.
+Исследование демонстрирует эвристический потенциал ПМО для формализации экзистенциального портретирования как
+критического метода.}
+
+\textcyrillic{Ключевые слова:} \textcyrillic{проективно-модальная онтология, В.С. Соловьёв, Д.С. Мережковский,
+экзистенциальное портретирование, модус-мода-модель, гностицизм-прагматизм, темпоральность, трагедия немоты,
+формализация критического метода, ПМО в литературоведении}
+
+\subsection[]{\selectlanguage{russian} }
+\subsection[\textcyrillic{К}
+\textcyrillic{в}\textcyrillic{о}\textcyrillic{п}\textcyrillic{р}\textcyrillic{о}\textcyrillic{с}\textcyrillic{у}
+\textcyrillic{о}
+\textcyrillic{ф}\textcyrillic{о}\textcyrillic{р}\textcyrillic{м}\textcyrillic{а}\textcyrillic{л}\textcyrillic{и}\textcyrillic{з}\textcyrillic{а}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{и}
+\textcyrillic{ф}\textcyrillic{и}\textcyrillic{л}\textcyrillic{о}\textcyrillic{с}\textcyrillic{о}\textcyrillic{ф}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}
+\textcyrillic{п}\textcyrillic{о}\textcyrillic{р}\textcyrillic{т}\textcyrillic{р}\textcyrillic{е}\textcyrillic{т}\textcyrillic{и}\textcyrillic{р}\textcyrillic{о}\textcyrillic{в}\textcyrillic{а}\textcyrillic{н}\textcyrillic{и}\textcyrillic{я}]{\textcyrillic{К
+вопросу о формализации философского портретирования}}
+\textcyrillic{Владимир Сергеевич Соловьёв (1853–1900) в метадискурсе русской культуры функционирует как фигура
+парадоксальная: образ $\text{\textgreek{«}}$великого учителя$\text{\textgreek{»}}$ символистов (Блок, 1906/1980; Белый,
+1907/1994) сосуществует с маркировкой его $\text{\textgreek{«}}$двойственности$\text{\textgreek{»}}$ и
+$\text{\textgreek{«}}$нераскрытости$\text{\textgreek{»}}$ (Розанов, 1900; Трубецкой, 1913). Критическая рецепция Д.С.
+Мережковского в статье $\text{\textgreek{«}}$Немой пророк$\text{\textgreek{»}}$ (1908) представляет уникальную попытку
+экзистенциального портретирования через операционализацию бинарной оппозиции
+$\text{\textgreek{«}}$созерцание/деяние$\text{\textgreek{»}}$, актуализированной в общественном дискурсе начала }XX
+\textcyrillic{века.}
+
+\textcyrillic{Риторико-герменевтическое исследование материала статьи позволило выявить лингвориторическую структуру
+речевого портретирования образа Вл. Соловьева через ассоциативно-семантические поля (АСП) концептов
+$\text{\textgreek{«}}$философ-созерцатель$\text{\textgreek{»}}$ и
+$\text{\textgreek{«}}$человек-деятель$\text{\textgreek{»}}$, концепты
+$\text{\textgreek{«}}$двойственности$\text{\textgreek{»}}$ и $\text{\textgreek{«}}$скрытости$\text{\textgreek{»}}$,
+используемые автором в качестве риторического механизма создания семантического напряжения. В таком аспекте интересной
+задачей представляется формализации критического метода Мережковского как систематической процедуры образного
+воплощения реальной личности в литературно-критическом тексте.}
+
+\textcyrillic{Настоящее исследование направлено на применение аппарата Проективно-модальной онтологии (ПМО) В.И.
+Моисеева (Моисеев, 2002, 2004) к анализу образа Соловьёва у Мережковского. ПМО как метаязык описания экстраполирована
+на литературно-критический дискурс Мережковского и позволяет реконструировать концептуальную структуру образа В.С.
+}\textcyrillic{Соловьёва в статье Д.С. Мережковского $\text{\textgreek{«}}$Немой пророк$\text{\textgreek{»}}$ через
+онтологическую архитектонику трагедии $\text{\textgreek{«}}$немого пророка$\text{\textgreek{»}}$.}
+
+\textcyrillic{В настоящей статье последовательно идентифицирован базовый модус (источник бытия) образа Соловьёва у
+Мережковского, определены собственные и несобственные модели (условия ограничения), на которых образуются или не
+образуются моды модуса, описана темпоральная архитектоника мод через триаду прошлое-настоящее-будущее и на основании
+этих результатов предпринята попытка }\textcyrillic{формализовать структуру риторической номинации
+$\text{\textgreek{«}}$немой пророк$\text{\textgreek{»}}$ как онтологическую апорию }\textcyrillic{в структуре ПМО, что,
+в свою очередь, позволяет интерпретировать метафору $\text{\textgreek{«}}$омута$\text{\textgreek{»}}$ в терминах
+предельного перехода. }
+
+\subsubsection[]{\selectlanguage{russian} }
+\subsubsection[\textcyrillic{В}\textcyrillic{в}\textcyrillic{е}\textcyrillic{д}\textcyrillic{е}\textcyrillic{н}\textcyrillic{и}\textcyrillic{е}]{\textcyrillic{Введение}}
+\textcyrillic{Согласно В.И. Моисееву (2002, 2004), Проективно-модальная онтология основана на семиместном предикате:}
+
+\begin{equation*}
+\text{Mod}(a,b,c,f,d,h,\alpha )
+\end{equation*}
+\textcyrillic{где:}
+
+\begin{itemize}
+\item  $a$–\textcyrillic{мода} (\textcyrillic{аспект, проявление)}
+\item  $b$–\textcyrillic{модус} (\textcyrillic{источник, генератор бытия)}
+\item  $c$–\textcyrillic{модель} (\textcyrillic{ограничивающее условие)}
+\item  $f$–\textcyrillic{проектор} (\textcyrillic{операция ограничения модуса до моды)}
+\item  $d$–\textcyrillic{модуль} (\textcyrillic{начало расширения)}
+\item  $h$–\textcyrillic{сюръектор} (\textcyrillic{операция расширения моды до модуса)}
+\item  $\alpha $–\textcyrillic{спецификатор} (\textcyrillic{контекст определения)}
+\end{itemize}
+\textcyrillic{Читается: $\text{\textgreek{«}}$В контексте } $\mathit{\alpha a}\text{ }$ \textcyrillic{есть мода модуса }
+$b$ \ \textcyrillic{в модели } $c$ \textcyrillic{с проектором } $f$, \textcyrillic{и } $b$ \textcyrillic{есть модус
+моды } $a$ \textcyrillic{в модуле } $d$ \textcyrillic{с сюръектором } $h$$\text{\textgreek{»}}$. 
+
+\textcyrillic{Базовая нотация: } $X\text{=}Y\acute Z$– $\text{\textgreek{«}}$ $X$ \textcyrillic{есть }
+$Y${}-\textcyrillic{при-условии-} $Z$$\text{\textgreek{»}}$, \textcyrillic{где проектор } $\acute{\pi }(Y,Z)\text{=}X$
+\textcyrillic{ограничивает модус до моды. }
+
+\textcyrillic{Критически важно понятие }\textcyrillic{собственных моделей} \textcyrillic{модуса }
+$M\left(Y\right)$\ (\textcyrillic{Моисеев, 2004: 218–219): не на всех условиях (моделях) модус способен образовывать
+свои моды. Например, геометрическое тело не может образовать моду в модели музыкального ряда; личность не образует моду
+в модели абстрактного геометрического пространства. }
+
+\textcyrillic{Для модуса } $Y$ \textcyrillic{модель } $Z$ \ \textcyrillic{является }\textcyrillic{несобственной},
+\textcyrillic{если:}
+
+\begin{equation*}
+Z{\notin}M(Y)\Rightarrow \acute{\pi }(Y,Z)\text{=}{\emptyset}
+\end{equation*}
+\textcyrillic{Проектор не определён, мода не образуется. Это не выбор, но }\textcyrillic{онтологическая невозможность}.
+
+\subsubsection[]{\selectlanguage{russian} }
+\subsubsection[\textcyrillic{П}\textcyrillic{М}\textcyrillic{О} \textcyrillic{и}
+\textcyrillic{э}\textcyrillic{к}\textcyrillic{з}\textcyrillic{и}\textcyrillic{с}\textcyrillic{т}\textcyrillic{е}\textcyrillic{н}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{а}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{н}\textcyrillic{о}\textcyrillic{е}
+\textcyrillic{п}\textcyrillic{о}\textcyrillic{р}\textcyrillic{т}\textcyrillic{р}\textcyrillic{е}\textcyrillic{т}\textcyrillic{и}\textcyrillic{р}\textcyrillic{о}\textcyrillic{в}\textcyrillic{а}\textcyrillic{н}\textcyrillic{и}\textcyrillic{е}]{\textcyrillic{ПМО
+и экзистенциальное портретирование}}
+\textcyrillic{Гипотеза настоящего исследования: }\textcyrillic{экзистенциальное портретирование} \textcyrillic{Соловьева
+Мережковским может быть формализовано как систематическое варьирование модуса личности (Соловьёва) на множестве моделей
+(темпоральных, онтологических, эпистемологических) с выявлением аутентичных мод (на собственных моделях, неаутентичных
+попыток образования мод (на несобственных моделях и онтологических апорий как точек блокировки проектора. }
+
+\textcyrillic{При формализации ПМО образа Соловьева в тексте Мережковского мы ориентировались на опыт применения
+указанного самим автором методики к тексту $\text{\textgreek{«}}$Парменида$\text{\textgreek{»}}$ Платона:
+$\text{\textgreek{«}}$Метод диалектического варьирования теперь выглядит как некоторый алгоритм, позволяющий взять
+некоторое начало и его отрицания, некоторое состояние и начать планомерно, регулярно и полно
+{\textquotedbl}нарезать{\textquotedbl} систему аспектаций-мод$\text{\textgreek{»}}$ (Моисеев (2002) с. 222).}
+
+\textcyrillic{Материалом исследования является текст статьи Д.С. Мережковского $\text{\textgreek{«}}$Немой
+пророк$\text{\textgreek{»}}$ из сборника $\text{\textgreek{«}}$В тихом омуте$\text{\textgreek{»}}$ (1908) в редакции
+Полного собрания сочинений (М., 1914. Т. 16. С. 128–135).}
+
+\textcyrillic{Базой исследовательской методологии филологические и лингвистические подходы: методика концептуального
+анализа для выявления базовых концептов образа Соловьёва в статье Мережковского и элементы герменевтического анализа
+при интерпретации метафорических структур критической статьи. }\ 
+
+\subsection[\textcyrillic{П}\textcyrillic{М}\textcyrillic{О}{}-\textcyrillic{с}\textcyrillic{т}\textcyrillic{р}\textcyrillic{у}\textcyrillic{к}\textcyrillic{т}\textcyrillic{у}\textcyrillic{р}\textcyrillic{а}
+\textcyrillic{о}\textcyrillic{б}\textcyrillic{р}\textcyrillic{а}\textcyrillic{з}\textcyrillic{а}
+\textcyrillic{С}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ь}\textcyrillic{ё}\textcyrillic{в}\textcyrillic{а}
+\textcyrillic{в}
+\textcyrillic{к}\textcyrillic{р}\textcyrillic{и}\textcyrillic{т}\textcyrillic{и}\textcyrillic{к}\textcyrillic{е}
+\textcyrillic{М}\textcyrillic{е}\textcyrillic{р}\textcyrillic{е}\textcyrillic{ж}\textcyrillic{к}\textcyrillic{о}\textcyrillic{в}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}]{\textcyrillic{ПМО-структура
+образа Соловьёва в критике Мережковского}}
+$\text{\textgreek{«}}$\textcyrillic{Вл. Соловьев }– \textcyrillic{гностик, может быть, }\textcyrillic{последний великий
+гностик всего христианства}$\text{\textgreek{»}}$. (\textcyrillic{Мережковский, 1914: 133)}
+
+\textcyrillic{Мережковский определяет Соловьёва не как нейтральный субъект, способный быть либо созерцателем, либо
+деятелем, но как }\textcyrillic{имманентно гностического} (\textcyrillic{созерцательного) модуса:}
+
+$\text{\textgreek{«}}$\textcyrillic{Для него сущность догмата открывается не воле сначала и потом разуму, а, наоборот,
+}\textcyrillic{сначала разуму, потом воле}. \textcyrillic{Он – рационалист, как всякий гностик$\text{\textgreek{»}}$.
+(Там же)}
+
+\textcyrillic{Формализация:}
+
+\textcyrillic{Базовый модус: }
+
+\begin{equation*}
+Y_{\text{\textcyrillic{Соловьёв}}}\text{=}\text{\textcyrillic{Гностик-созерцатель}}
+\end{equation*}
+\textcyrillic{Структурные предикаты модуса (не моды, но сущностные характеристики):}
+
+\begin{itemize}
+\item  $\text{Pr}_1(Y)$: \textcyrillic{Приоритет разума (} $\text{\textcyrillic{гнозис}}$) \textcyrillic{над волей }
+\item  $\text{Pr}_2(Y)$: $\text{\textgreek{«}}$\textcyrillic{Богоделание вытекает из богопознания$\text{\textgreek{»}}$
+}
+\item  $\text{Pr}_3(Y)$: \textcyrillic{Рационалистичность }
+\item  $\text{Pr}_4(Y)$: \textcyrillic{Консервативность ($\text{\textgreek{«}}$единственный консерватор в современной,
+революционной России$\text{\textgreek{»}}$) }
+\item  $\text{Pr}_5(Y)$: \textcyrillic{Реставраторство ($\text{\textgreek{«}}$Да будет снова то, что
+было$\text{\textgreek{»}}$) }
+\end{itemize}
+\textcyrillic{Эти характеристики принадлежат }\textcyrillic{самому модусу}, \textcyrillic{а не образуются как моды в
+различных моделях.}
+
+\subsubsection[]{\selectlanguage{russian} }
+\subsubsection[\textcyrillic{С}\textcyrillic{о}\textcyrillic{б}\textcyrillic{с}\textcyrillic{т}\textcyrillic{в}\textcyrillic{е}\textcyrillic{н}\textcyrillic{н}\textcyrillic{ы}\textcyrillic{е}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{е}\textcyrillic{л}\textcyrillic{и}:
+\textcyrillic{т}\textcyrillic{е}\textcyrillic{м}\textcyrillic{п}\textcyrillic{о}\textcyrillic{р}\textcyrillic{а}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{н}\textcyrillic{а}\textcyrillic{я}
+\textcyrillic{т}\textcyrillic{р}\textcyrillic{и}\textcyrillic{а}\textcyrillic{д}\textcyrillic{а}]{\textcyrillic{Собственные
+модели: темпоральная триада}}
+\textcyrillic{Мережковский выявляет три }\textcyrillic{собственные модели}  $M(Y_{\text{\textcyrillic{Соловьёв}}})$,
+\textcyrillic{на которых модус образует свои аутентичные моды: }
+
+\paragraph[\textcyrillic{М}\textcyrillic{о}\textcyrillic{д}\textcyrillic{е}\textcyrillic{л}\textcyrillic{ь} 1:
+\textcyrillic{П}\textcyrillic{р}\textcyrillic{о}\textcyrillic{ш}\textcyrillic{л}\textcyrillic{о}\textcyrillic{е}
+]{\textcyrillic{Модель 1: Прошлое } $Z_{\text{\textcyrillic{прошл}}}$}
+\begin{equation*}
+X_{\text{\textcyrillic{реставратор}}}\text{=}Y\acute Z_{\text{\textcyrillic{прошл}}}
+\end{equation*}
+\textcyrillic{Для такого понимания базовой моды можно отметить следующие текстовые маркеры:}
+
+$\text{\textgreek{«}}$\textcyrillic{Розовый башмачок} – \textcyrillic{безнадежная романтика прошлого, желание сделать
+прошлое не только настоящим, но и будущим, таково безумие этого печального рыцаря Прекрасной
+Дамы$\text{\textgreek{»}}$. (С. 131)}
+
+$\text{\textgreek{«}}$\textcyrillic{Былое надежно; будущее страшно$\text{\textgreek{»}}$. (С. 132)}
+
+$\text{\textgreek{«}}$\textcyrillic{Лучи }\textcyrillic{заходящего солнца}, \textcyrillic{лампадный свет
+}\textcyrillic{вечерний} \textcyrillic{любил он больше, чем дневной и утренний. – }\textcyrillic{Свете тихий},
+\textcyrillic{святыя славы}… \textcyrillic{Пришедше на запад солнца}, \textcyrillic{видевше свет
+вечерний}…$\text{\textgreek{»}}$. (\textcyrillic{С. 132)}
+
+\textcyrillic{Символические репрезентации модели:}
+
+\begin{itemize}
+\item \textcyrillic{розовый башмачок} – \textcyrillic{материализованная модель } $Z_{\text{\textcyrillic{прошл}}}$
+\textcyrillic{как вещь-условие }
+\item \textcyrillic{византийское лицо} – $\text{\textgreek{«}}$\textcyrillic{иконописное лицо древнерусского или
+византийского святого, как будто вынырнуло из той древности, которую так усердно изучал отец$\text{\textgreek{»}}$ (С.
+132)}
+\item \textcyrillic{теократический проект} – $\text{\textgreek{«}}$\textcyrillic{восстановить, реставрировать три
+исполинские развалины средневековья: вселенскую монархию… }\textcyrillic{вселенскую церковь… вселенскую
+догматику$\text{\textgreek{»}}$ (С. 132)}
+\end{itemize}
+\textcyrillic{Мода:}
+
+\begin{equation*}
+X_{\text{\textcyrillic{реставратор}}}\text{=}\text{$\text{\textgreek{«}}$\textcyrillic{тайный
+славянофил$\text{\textgreek{»}}$, романтик былого}}
+\end{equation*}
+\paragraph[\textcyrillic{М}\textcyrillic{о}\textcyrillic{д}\textcyrillic{е}\textcyrillic{л}\textcyrillic{ь} 2:
+\textcyrillic{Н}\textcyrillic{а}\textcyrillic{с}\textcyrillic{т}\textcyrillic{о}\textcyrillic{я}\textcyrillic{щ}\textcyrillic{е}\textcyrillic{е}
+]{\textcyrillic{Модель 2: Настоящее } $Z_{\text{\textcyrillic{наст}}}$}
+\begin{equation*}
+X_{\text{\textcyrillic{консерватор}}}\text{=}Y\acute Z_{\text{\textcyrillic{наст}}}
+\end{equation*}
+\textcyrillic{Текстовые маркеры:}
+
+$\text{\textgreek{«}}$\textcyrillic{Не разрушать и не созидать, а }\textcyrillic{сохранять и поддерживать, подпирать
+валящееся здание, чинить и замазывать трещины} –\textcyrillic{таков его глубочайший инстинкт$\text{\textgreek{»}}$. (С.
+131)}
+
+$\text{\textgreek{«}}$\textcyrillic{Остановить, запрудить всемирный поток разрушения –такова его заветная
+цель$\text{\textgreek{»}}$. (С. 132)}
+
+\textcyrillic{Мода:}
+
+\begin{equation*}
+X_{\text{\textcyrillic{консерватор}}}\text{=}\text{$\text{\textgreek{«}}$\textcyrillic{подпирающий
+валящееся$\text{\textgreek{»}}$, консервирующий}}
+\end{equation*}
+\paragraph[\textcyrillic{М}\textcyrillic{о}\textcyrillic{д}\textcyrillic{е}\textcyrillic{л}\textcyrillic{ь} 3:
+\textcyrillic{Б}\textcyrillic{у}\textcyrillic{д}\textcyrillic{у}\textcyrillic{щ}\textcyrillic{е}\textcyrillic{е}
+\textcyrillic{к}\textcyrillic{а}\textcyrillic{к}
+\textcyrillic{э}\textcyrillic{с}\textcyrillic{х}\textcyrillic{а}\textcyrillic{т}\textcyrillic{о}\textcyrillic{н}
+]{\textcyrillic{Модель 3: Будущее как эсхатон } $Z_{\text{\textcyrillic{эсх}}}$}
+\begin{equation*}
+X_{\text{\textcyrillic{эсхатолог}}}\text{=}Y\acute Z_{\text{\textcyrillic{эсх}}}
+\end{equation*}
+\textcyrillic{Текстовые маркеры:}
+
+$\text{\textgreek{«}}$\textcyrillic{Страх будущего – {\textquotedbl}антихристов страх{\textquotedbl}.
+{\textquotedbl}Через двести-триста лет, какая будет жизнь на земле!{\textquotedbl} –воркуют чеховские герои. –
+}\textcyrillic{Через двести-триста лет монголы завоюют Европу, начнется всемирная резня, придет антихрист, и наступит
+конец мира}, –\textcyrillic{каркает Вл. Соловьев$\text{\textgreek{»}}$. (С. 132)}
+
+$\text{\textgreek{«}}$\textcyrillic{Последняя и единственная революция для него – переворот уже не исторический, а
+космический – кончина мира$\text{\textgreek{»}}$. (С. 132)}
+
+\textcyrillic{Согласно пониманию Мережковского, будущее для Соловьёва выступает не пространством созидания, но
+катастрофой, концом мира, $\text{\textgreek{«}}$быть худу$\text{\textgreek{»}}$. }
+
+\textcyrillic{В таком понимании модель } $Z_{\text{\textcyrillic{эсх}}}$ \ \textcyrillic{принципиально отлична от
+революционной модели } $Z_{\text{\textcyrillic{прагм}}}$(\textcyrillic{см. ниже). }
+
+\textcyrillic{Мода:}
+
+\begin{equation*}
+X_{\text{\textcyrillic{эсхатолог}}}\text{=}\text{$\text{\textgreek{«}}$\textcyrillic{пророк
+антихриста$\text{\textgreek{»}}$, апокалиптик}}
+\end{equation*}
+\subsubsection[\textcyrillic{Т}\textcyrillic{е}\textcyrillic{п}\textcyrillic{е}\textcyrillic{р}\textcyrillic{ь}
+\textcyrillic{р}\textcyrillic{а}\textcyrillic{с}\textcyrillic{с}\textcyrillic{м}\textcyrillic{о}\textcyrillic{т}\textcyrillic{р}\textcyrillic{и}\textcyrillic{м}
+\textcyrillic{н}\textcyrillic{е}\textcyrillic{с}\textcyrillic{о}\textcyrillic{б}\textcyrillic{с}\textcyrillic{т}\textcyrillic{в}\textcyrillic{е}\textcyrillic{н}\textcyrillic{н}\textcyrillic{у}\textcyrillic{ю}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{е}\textcyrillic{л}\textcyrillic{ь}, \textcyrillic{в}
+\textcyrillic{к}\textcyrillic{о}\textcyrillic{т}\textcyrillic{о}\textcyrillic{р}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{р}\textcyrillic{е}\textcyrillic{в}\textcyrillic{о}\textcyrillic{л}\textcyrillic{ю}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{о}\textcyrillic{н}\textcyrillic{н}\textcyrillic{ы}\textcyrillic{й}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{а}\textcyrillic{г}\textcyrillic{м}\textcyrillic{а}\textcyrillic{т}\textcyrillic{и}\textcyrillic{з}\textcyrillic{м}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{е}\textcyrillic{д}\textcyrillic{с}\textcyrillic{т}\textcyrillic{а}\textcyrillic{в}\textcyrillic{л}\textcyrillic{е}\textcyrillic{н}
+\textcyrillic{к}\textcyrillic{а}\textcyrillic{к} \textcyrillic{Д}\textcyrillic{л}\textcyrillic{я}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{у}\textcyrillic{с}\textcyrillic{а}
+\textcyrillic{С}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ь}\textcyrillic{е}\textcyrillic{в}\textcyrillic{а}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{а}
+\textcyrillic{р}\textcyrillic{е}\textcyrillic{в}\textcyrillic{о}\textcyrillic{л}\textcyrillic{ю}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{о}\textcyrillic{н}\textcyrillic{е}\textcyrillic{р}\textcyrillic{а}
+(\textcyrillic{р}\textcyrillic{е}\textcyrillic{в}\textcyrillic{о}\textcyrillic{л}\textcyrillic{ю}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{о}\textcyrillic{н}\textcyrillic{н}\textcyrillic{ы}\textcyrillic{й}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{а}\textcyrillic{г}\textcyrillic{м}\textcyrillic{а}\textcyrillic{т}\textcyrillic{и}\textcyrillic{з}\textcyrillic{м})
+\textcyrillic{н}\textcyrillic{е}
+\textcyrillic{о}\textcyrillic{б}\textcyrillic{р}\textcyrillic{а}\textcyrillic{з}\textcyrillic{у}\textcyrillic{е}\textcyrillic{т}\textcyrillic{с}\textcyrillic{я}:]{\textcyrillic{Теперь
+рассмотрим несобственную модель, в которой революционный прагматизм представлен как } ${\emptyset}.\text{ }$
+\textcyrillic{Для модуса Соловьева мода революционера (революционный прагматизм) не образуется:}}
+\begin{equation*}
+Z_{\text{\textcyrillic{прагм}}}{\notin}M(Y_{\text{\textcyrillic{Соловьёв}}})\Rightarrow \acute{\pi
+}(Y,Z_{\text{\textcyrillic{прагм}}})\text{=}{\emptyset}
+\end{equation*}
+\textcyrillic{Текстовые обоснования:}
+
+$\text{\textgreek{«}}$\textcyrillic{Стихия революционная }\textcyrillic{чужда} \textcyrillic{ему }\textcyrillic{навеки и
+безнадежно}, \textcyrillic{если не как человеку-деятелю, то как философу-созерцателю$\text{\textgreek{»}}$. (С. 132)}
+
+$\text{\textgreek{«}}$\textcyrillic{Не только революция, но и реформация, не могли бы вспыхнуть} \textcyrillic{от
+соловьевского гнозиса, как самый плохенький пожар от самого великолепного, вечернего зарева$\text{\textgreek{»}}$. (С.
+133)}
+
+\textcyrillic{Мережковский визуализирует эту невозможность через }\textcyrillic{метафору бессилия, бесполезности и
+невидимости:}
+
+
+\bigskip
+
+\textcyrillic{Зарево/пожар}
+
+\begin{equation*}
+\text{\textcyrillic{Зарево (гнозис)}}\rightarrow \text{[338?]}\text{\textcyrillic{Пожар (действие)}}
+\end{equation*}
+\textcyrillic{Оппозиция:}
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{6.684cm}|m{9.408cm}|}
+\hline
+{\selectlanguage{english} \textcyrillic{Зарево (гнозис)}} &
+{\selectlanguage{english} \textcyrillic{Пожар (прагматизм)}}\\\hline
+{\selectlanguage{english} \textcyrillic{Эстетическая красота}} &
+{\selectlanguage{english} \textcyrillic{Практическая эффективность}}\\\hline
+{\selectlanguage{english} $\text{\textgreek{«}}$\textcyrillic{Великолепное$\text{\textgreek{»}}$}} &
+{\selectlanguage{english} $\text{\textgreek{«}}$\textcyrillic{Плохенький$\text{\textgreek{»}}$}}\\\hline
+{\selectlanguage{english} $\text{\textgreek{«}}$\textcyrillic{Вечернее$\text{\textgreek{»}}$ (закат)}} &
+{\selectlanguage{english} \textcyrillic{Восходящее будущее}}\\\hline
+ $E_{\text{\textcyrillic{потенц}}}{\gg}$ &
+ $E_{\text{\textcyrillic{кинет}}}{\ll}$\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+\textcyrillic{Жало пчелы/гиппопотам}
+
+$\text{\textgreek{«}}$\textcyrillic{Реальное действие соловьевской критики на Церковь поразительно ничтожно: критика эта
+для православия, }\textcyrillic{как жало пчелы для гиппопотамовой кожи: православие, можно сказать, и не
+почесалось}$\text{\textgreek{»}}$. (\textcyrillic{С. 134)}
+
+
+\bigskip
+
+ $\text{\textcyrillic{Гиппопотамова}}\text{ \textcyrillic{кожа (гнозис)}}\rightarrow
+\text{[338?]}\text{\textcyrillic{Жало пчелы (действие)}}$
+
+\textcyrillic{Оппозиция:}
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{6.684cm}|m{9.408cm}|}
+\hline
+{\selectlanguage{english} \textcyrillic{Гиппопотамова кожа} (\textcyrillic{гнозис)}} &
+{\selectlanguage{english} \textcyrillic{Жало пчелы} (\textcyrillic{прагматизм)}}\\\hline
+{\selectlanguage{english} \textcyrillic{Церковь}} &
+{\selectlanguage{english} \textcyrillic{Соловьевская критика}}\\\hline
+{\selectlanguage{english} \textcyrillic{православие}} &
+{\selectlanguage{english} \textcyrillic{Критика (эта)}}\\\hline
+{\selectlanguage{english} \textcyrillic{не почесалось}} &
+{\selectlanguage{english} \textcyrillic{Поразительно ничтожно}}\\\hline
+ $E_{\text{\textcyrillic{потенц}}}{\gg}$ &
+ $E_{\text{\textcyrillic{кинет}}}{\ll}$\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+
+\bigskip
+
+$\text{\textgreek{«}}$\textcyrillic{Л. Толстого все-таки отлучили от Церкви}. \textcyrillic{Вл. Соловьева не отлучали и
+не благословляли, а }\textcyrillic{просто не заметили}$\text{\textgreek{»}}$. (\textcyrillic{С. 134)}
+
+\textcyrillic{Глагол }\textcyrillic{не заметили} \textcyrillic{фиксирует радикальную невидимость Соловьёва для
+институционального сознания – не отвержение (как у Толстого), но отсутствие в поле восприятия, что маркирует отсутствие
+подлинного деятельного начала.}
+
+
+\bigskip
+
+\begin{equation*}
+\text{\textcyrillic{Отлучили (гнозис)}}\rightarrow \text{[338?]}\text{ }\text{\textcyrillic{не заметили (действие)}}
+\end{equation*}
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{6.656cm}|m{9.357cm}|}
+\hline
+{\selectlanguage{english} \textcyrillic{Л. Толстого все-таки отлучили от Церкви} (\textcyrillic{гнозис)}} &
+{\selectlanguage{english} \textcyrillic{Вл. Соловьева не отлучали и не благословляли, а }\textcyrillic{просто не
+заметили (прагматизм)}}\\\hline
+{\selectlanguage{english} \textcyrillic{Власть церкви как факт}} &
+{\selectlanguage{english} \textcyrillic{Власть церкви как потенция отлучить или благословить}}\\\hline
+{\selectlanguage{english} \textcyrillic{отлучение как состоявшийся факт}} &
+{\selectlanguage{english} \textcyrillic{Не заметили}}\\\hline
+ $E_{\text{\textcyrillic{потенц}}}{\gg}$ &
+ $E_{\text{\textcyrillic{кинет}}}{\ll}$\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+\textcyrillic{Формализация в ПМО:}
+
+\textcyrillic{Собственные модели модуса – те, на которых он способен образовывать моды. }
+
+\textcyrillic{Для Соловьёва-гностика:}
+
+ $M(Y)\text{=}\{Z_{\text{\textcyrillic{прошл}}},Z_{\text{\textcyrillic{наст}}},Z_{\text{\textcyrillic{эсх}}}\}$
+$Z_{\text{\textcyrillic{прагм}}}{\notin}M(Y)$
+
+\textcyrillic{Следовательно:}
+
+\begin{equation*}
+\acute{\pi }:Y\times M(Y)\rightarrow \text{\textcyrillic{Моды}}
+\end{equation*}
+\textcyrillic{но}
+
+\begin{equation*}
+\acute{\pi }(Y,Z_{\text{\textcyrillic{прагм}}})\text{ }\text{–}\text{ }\text{undefined}
+\end{equation*}
+\textcyrillic{Попытка образовать моду деятеля приводит не к моде, но к }\textcyrillic{социальной маске}
+
+
+\bigskip
+
+\subsubsection[\textcyrillic{Д}\textcyrillic{в}\textcyrillic{о}\textcyrillic{й}\textcyrillic{с}\textcyrillic{т}\textcyrillic{в}\textcyrillic{е}\textcyrillic{н}\textcyrillic{н}\textcyrillic{о}\textcyrillic{с}\textcyrillic{т}\textcyrillic{ь}
+\textcyrillic{к}\textcyrillic{а}\textcyrillic{к}
+\textcyrillic{к}\textcyrillic{о}\textcyrillic{н}\textcyrillic{ф}\textcyrillic{л}\textcyrillic{и}\textcyrillic{к}\textcyrillic{т}
+\textcyrillic{а}\textcyrillic{у}\textcyrillic{т}\textcyrillic{е}\textcyrillic{н}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{н}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{и}
+\textcyrillic{н}\textcyrillic{е}\textcyrillic{а}\textcyrillic{у}\textcyrillic{т}\textcyrillic{е}\textcyrillic{н}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{н}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}]{\textcyrillic{Двойственность как конфликт аутентичной и неаутентичной
+мод}}
+\textcyrillic{Концепт двойственности локализуется не как симметричное сосуществование созерцателя и деятеля, но как
+асимметричный конфликт между:}
+
+\paragraph[\textcyrillic{С}\textcyrillic{к}\textcyrillic{р}\textcyrillic{ы}\textcyrillic{т}\textcyrillic{ы}\textcyrillic{й}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{о}\textcyrillic{р}\textcyrillic{о}\textcyrillic{к}
+(\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{а} 1
+(\textcyrillic{а}\textcyrillic{у}\textcyrillic{т}\textcyrillic{е}\textcyrillic{н}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{н}\textcyrillic{а}\textcyrillic{я}):
+]{\textcyrillic{Скрытый пророк }(\textcyrillic{мода 1 (аутентичная):} }
+\begin{equation*}
+X_{\text{\textcyrillic{тайное}}}\text{=}(Y\acute
+Z_{\text{\textcyrillic{гнозис}}})\acute{\text{*}}(Z_{\text{\textcyrillic{скрытое}}})
+\end{equation*}
+\textcyrillic{Это мода второго порядка: на базовой моде гнозиса накладывается условие скрытости.}
+
+\textcyrillic{Текстовые маркеры:}
+
+$\text{\textgreek{«}}$\textcyrillic{Тут уже другое, не явное, а }\textcyrillic{тайное лицо} \textcyrillic{его; не
+прошлое, а будущее, не реставрация, а революция$\text{\textgreek{»}}$. }
+
+$\text{\textgreek{«}}$\textcyrillic{Об этой революции говорит уже не философ десятью томами, а }\textcyrillic{немыми
+знаками немой пророк}$\text{\textgreek{»}}$. 
+
+\textcyrillic{Характеристики:}
+
+\begin{itemize}
+\item \textcyrillic{Онтологически истинна (содержит подлинную профетическую истину)}
+\item \textcyrillic{Эпистемологически недоступна (невыразима в публичном дискурсе)}
+\item \textcyrillic{Семиотически немая (не артикулируется в десяти томах философии)}
+\end{itemize}
+\paragraph[]{\selectlanguage{russian} }
+\paragraph[\textcyrillic{П}\textcyrillic{у}\textcyrillic{б}\textcyrillic{л}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{н}\textcyrillic{ы}\textcyrillic{й}
+\textcyrillic{ф}\textcyrillic{и}\textcyrillic{л}\textcyrillic{о}\textcyrillic{с}\textcyrillic{о}\textcyrillic{ф}
+(\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{а} 2
+(\textcyrillic{н}\textcyrillic{е}\textcyrillic{а}\textcyrillic{у}\textcyrillic{т}\textcyrillic{е}\textcyrillic{н}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{н}\textcyrillic{а}\textcyrillic{я}):
+]{\textcyrillic{Публичный философ }(\textcyrillic{мода 2 (неаутентичная):} }
+\begin{equation*}
+X_{\text{\textcyrillic{явное}}}\text{=}(Y\acute
+Z_{\text{\textcyrillic{гнозис}}})\acute{\text{*}}(Z_{\text{\textcyrillic{публичное}}})
+\end{equation*}
+\textcyrillic{Текстовые маркеры:}
+
+$\text{\textgreek{«}}$\textcyrillic{В произведениях все стройно, ясно, гладко, даже }\textcyrillic{слишком гладко,
+выглажено, вылощено}$\text{\textgreek{»}}$. 
+
+\textcyrillic{Семантическое накопление адъективов гладкости маркирует }\textcyrillic{искусственность},
+\textcyrillic{неаутентичность} \textcyrillic{публичного образа.}
+
+$\text{\textgreek{«}}$\textcyrillic{Существует два рода писателей: одни […] в своих произведениях открываются, другие,
+как Лермонтов и Гоголь, }\textcyrillic{за ними скрываются}$\text{\textgreek{»}}$. 
+
+\textcyrillic{Характеристики:}
+
+\begin{itemize}
+\item \textcyrillic{Дискурсивно выражена ($\text{\textgreek{«}}$десять томов$\text{\textgreek{»}}$)}
+\item \textcyrillic{Онтологически ложна (маска)}
+\item \textcyrillic{Семиотически избыточна ($\text{\textgreek{«}}$слишком гладко, вылощено$\text{\textgreek{»}}$)}
+\end{itemize}
+\paragraph[\textcyrillic{Т}\textcyrillic{р}\textcyrillic{а}\textcyrillic{г}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{а}\textcyrillic{я}
+\textcyrillic{а}\textcyrillic{п}\textcyrillic{о}\textcyrillic{р}\textcyrillic{и}\textcyrillic{я}]{\textcyrillic{Трагическая
+апория}}
+ $X_{\text{\textcyrillic{тайное}}}{\neq}X_{\text{\textcyrillic{явное}}}$
+$X_{\text{\textcyrillic{тайное}}}{\cap}X_{\text{\textcyrillic{явное}}}\text{=}{\emptyset}$
+
+\textcyrillic{Профетическая истина (пророк) Соловьёва невыразима в модели публичного дискурса }
+$Z_{\text{\textcyrillic{публ}}}$, \textcyrillic{а выраженное в публичном дискурсе не схватывает профетической истины.}
+
+\textcyrillic{Текстовые маркеры:}
+
+$\text{\textgreek{«}}$\textcyrillic{Если Вл. Соловьев, действительно, –предтеча Новой Церкви, то не тем, что он говорил
+и жил, как мудрец, а тем, что молчал и {\textquotedbl}умер, как безумец{\textquotedbl}$\text{\textgreek{»}}$. }
+
+
+\bigskip
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{8.711cm}|m{7.302cm}|}
+\hline
+{\selectlanguage{english} \textcyrillic{Говорил}} &
+{\selectlanguage{english} \textcyrillic{Молчал}}\\\hline
+{\selectlanguage{english} \textcyrillic{Мудрец}} &
+{\selectlanguage{english} \textcyrillic{Безумец}}\\\hline
+{\selectlanguage{english} \textcyrillic{Философия (десять томов)}} &
+{\selectlanguage{english} \textcyrillic{Пророчество (немота)}}\\\hline
+{\selectlanguage{english} \textcyrillic{Проектор } $\acute{\pi }$(\textcyrillic{снижение) }} &
+{\selectlanguage{english} \textcyrillic{Сюръектор } $\acute{\sigma }$(\textcyrillic{расширение) }}\\\hline
+{\selectlanguage{english} \textcyrillic{Неаутентично}} &
+{\selectlanguage{english} \textcyrillic{Аутентично}}\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+\subsection[5.
+\textcyrillic{Р}\textcyrillic{о}\textcyrillic{з}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ы}\textcyrillic{й}
+\textcyrillic{б}\textcyrillic{а}\textcyrillic{ш}\textcyrillic{м}\textcyrillic{а}\textcyrillic{ч}\textcyrillic{о}\textcyrillic{к}:
+\textcyrillic{м}\textcyrillic{а}\textcyrillic{т}\textcyrillic{е}\textcyrillic{р}\textcyrillic{и}\textcyrillic{а}\textcyrillic{л}\textcyrillic{и}\textcyrillic{з}\textcyrillic{о}\textcyrillic{в}\textcyrillic{а}\textcyrillic{н}\textcyrillic{н}\textcyrillic{а}\textcyrillic{я}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{е}\textcyrillic{л}\textcyrillic{ь}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{о}\textcyrillic{ш}\textcyrillic{л}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}]{5.
+\textcyrillic{Розовый башмачок: материализованная модель прошлого}}
+\textcyrillic{Первоначальный анализ символа розовый башмачок показывал как его как символ двойной функциональностью: (1)
+созерцательность, (2) возвращение к реальности. Медленное чтение текста позволяет увидеть, что Мережковский
+эксплицирует функцию башмачка вполне однозначно. }
+
+\textcyrillic{Текстовые маркеры:}
+
+$\text{\textgreek{«}}${\textquotedbl}\textcyrillic{Розовый башмачок{\textquotedbl} – безнадежная романтика прошлого,
+желание сделать прошлое не только настоящим, но и будущим, таково безумие этого печального рыцаря Прекрасной
+Дамы$\text{\textgreek{»}}$. }
+
+$\text{\textgreek{«}}$\textcyrillic{Вот иногда спрашиваешь себя: вся его религиозно-философская система не отвлеченное
+ли созерцание вместо жизненного действия, не бесплотный ли символ вместо реального воплощения –не
+{\textquotedbl}розовый ли башмачок{\textquotedbl}?$\text{\textgreek{»}}$ }
+
+
+\bigskip
+
+\textcyrillic{Башмачок –не точка перехода между модами, но материализованная модель:}
+
+\begin{equation*}
+\text{\textcyrillic{Башмачок}}{\cong}Z_{\text{\textcyrillic{прошл}}}
+\end{equation*}
+\textcyrillic{Это модель-как-вещь, через которую проектор образует моду:}
+
+\begin{equation*}
+\acute{\pi }(Y_{\text{\textcyrillic{Соловьёв}}},\text{\textcyrillic{Башмачок}})\text{=}Y\acute
+Z_{\text{\textcyrillic{прошл}}}\text{=}X_{\text{\textcyrillic{реставратор}}}
+\end{equation*}
+\subsubsection[\textcyrillic{О}\textcyrillic{д}\textcyrillic{н}\textcyrillic{а}\textcyrillic{к}\textcyrillic{о}
+\textcyrillic{С}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ь}\textcyrillic{е}\textcyrillic{в}
+\textcyrillic{в}
+\textcyrillic{и}\textcyrillic{н}\textcyrillic{т}\textcyrillic{е}\textcyrillic{р}\textcyrillic{п}\textcyrillic{р}\textcyrillic{е}\textcyrillic{т}\textcyrillic{а}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{и}
+\textcyrillic{М}\textcyrillic{е}\textcyrillic{р}\textcyrillic{е}\textcyrillic{ж}\textcyrillic{к}\textcyrillic{о}\textcyrillic{в}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}
+\textcyrillic{э}\textcyrillic{к}\textcyrillic{с}\textcyrillic{п}\textcyrillic{л}\textcyrillic{и}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{р}\textcyrillic{у}\textcyrillic{е}\textcyrillic{т}
+\textcyrillic{с}\textcyrillic{т}\textcyrillic{р}\textcyrillic{а}\textcyrillic{х}
+\textcyrillic{у}\textcyrillic{т}\textcyrillic{р}\textcyrillic{а}\textcyrillic{т}\textcyrillic{ы}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{е}\textcyrillic{л}\textcyrillic{и}, \textcyrillic{в}
+\textcyrillic{к}\textcyrillic{о}\textcyrillic{т}\textcyrillic{о}\textcyrillic{р}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{т}\textcyrillic{о}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{к}\textcyrillic{о} \textcyrillic{и}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{ж}\textcyrillic{е}\textcyrillic{т}
+\textcyrillic{с}\textcyrillic{у}\textcyrillic{щ}\textcyrillic{е}\textcyrillic{с}\textcyrillic{т}\textcyrillic{в}\textcyrillic{о}\textcyrillic{в}\textcyrillic{а}\textcyrillic{т}\textcyrillic{ь}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{у}\textcyrillic{с}. ]{\textcyrillic{Однако Соловьев в
+интерпретации Мережковского эксплицирует страх утраты модели, в которой только и может существовать модус. }}
+\subsubsection[\textcyrillic{Т}\textcyrillic{е}\textcyrillic{к}\textcyrillic{с}\textcyrillic{т}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ы}\textcyrillic{е}
+\textcyrillic{м}\textcyrillic{а}\textcyrillic{р}\textcyrillic{к}\textcyrillic{е}\textcyrillic{р}\textcyrillic{ы}:]{\textcyrillic{Текстовые
+маркеры:}}
+$\text{\textgreek{«}}$\textcyrillic{Мама! Надежда! да что же это такое? Пропал мой башмачок!$\text{\textgreek{»}}$ }
+
+\textcyrillic{Ведь если утрачена модель } $Z{\in}M(Y)$, \textcyrillic{модус теряет возможность образования моды: }
+
+\begin{equation*}
+Z{\notin}M(Y)\Rightarrow \acute{\pi }(Y,Z)\text{=}{\emptyset}
+\end{equation*}
+\textcyrillic{Утрата башмачка } ${\equiv}$ \textcyrillic{утрата } $Z_{\text{\textcyrillic{прошл}}}\Rightarrow $
+\textcyrillic{невозможность моды } $X_{\text{\textcyrillic{реставратор}}}$. 
+
+
+\bigskip
+
+\subsection[\textcyrillic{О}\textcyrillic{с}\textcyrillic{о}\textcyrillic{б}\textcyrillic{е}\textcyrillic{н}\textcyrillic{н}\textcyrillic{о}
+\textcyrillic{и}\textcyrillic{н}\textcyrillic{т}\textcyrillic{е}\textcyrillic{р}\textcyrillic{е}\textcyrillic{с}\textcyrillic{е}\textcyrillic{н}
+\textcyrillic{в} \textcyrillic{д}\textcyrillic{а}\textcyrillic{н}\textcyrillic{н}\textcyrillic{о}\textcyrillic{м}
+\textcyrillic{к}\textcyrillic{о}\textcyrillic{н}\textcyrillic{т}\textcyrillic{е}\textcyrillic{к}\textcyrillic{с}\textcyrillic{т}\textcyrillic{е}
+\textcyrillic{к}\textcyrillic{о}\textcyrillic{н}\textcyrillic{ц}\textcyrillic{е}\textcyrillic{п}\textcyrillic{т}
+$\text{\textgreek{«}}$\textcyrillic{о}\textcyrillic{м}\textcyrillic{у}\textcyrillic{т}$\text{\textgreek{»}}$,
+\textcyrillic{р}\textcyrillic{е}\textcyrillic{а}\textcyrillic{л}\textcyrillic{и}\textcyrillic{з}\textcyrillic{о}\textcyrillic{в}\textcyrillic{а}\textcyrillic{н}\textcyrillic{н}\textcyrillic{ы}\textcyrillic{й}
+\textcyrillic{в}
+\textcyrillic{к}\textcyrillic{р}\textcyrillic{и}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{с}\textcyrillic{т}\textcyrillic{а}\textcyrillic{т}\textcyrillic{ь}\textcyrillic{е}
+\textcyrillic{к}\textcyrillic{а}\textcyrillic{к}
+\textcyrillic{т}\textcyrillic{о}\textcyrillic{п}\textcyrillic{о}\textcyrillic{с}
+\textcyrillic{н}\textcyrillic{е}\textcyrillic{с}\textcyrillic{б}\textcyrillic{ы}\textcyrillic{в}\textcyrillic{ш}\textcyrillic{е}\textcyrillic{г}\textcyrillic{о}\textcyrillic{с}\textcyrillic{я}
+\textcyrillic{с}\textcyrillic{л}\textcyrillic{и}\textcyrillic{я}\textcyrillic{н}\textcyrillic{и}\textcyrillic{я}.
+]{\textcyrillic{Особенно интересен в данном контексте концепт $\text{\textgreek{«}}$омут$\text{\textgreek{»}}$,
+реализованный в критической статье как топос несбывшегося слияния. }}
+\textcyrillic{С одной стороны, $\text{\textgreek{«}}$омут$\text{\textgreek{»}}$ может быть рассмотрен как пространство
+успешного синтеза противоположностей. Однако Мережковский говорит о слиянии в футуральной модальности. }
+
+\textcyrillic{Текстовые маркеры:}
+
+$\text{\textgreek{«}}$\textcyrillic{Рано или поздно эти два противоположные течения встретятся и
+}\textcyrillic{сольются} \textcyrillic{в одном бездонном омуте$\text{\textgreek{»}}$. }
+
+$\text{\textgreek{«}}$\textcyrillic{Хотя в последнем пределе религиозное созерцание и религиозное действие
+}\textcyrillic{сливаются} \textcyrillic{в одно, но до этого }\textcyrillic{слияния} \textcyrillic{предстоит им
+исчерпать все мыслимые противоречия$\text{\textgreek{»}}$.}
+
+\textcyrillic{Таким образом, омут можно понимать как предельный переход}
+
+\textcyrillic{Формализация:}
+
+\begin{equation*}
+\lim \underset{t\rightarrow {\infty}}{\text{[2061?]}}[Y\acute Z_{\text{\textcyrillic{гнозис}}}(t){\oplus}Y\acute
+Z_{\text{\textcyrillic{прагм}}}(t)]\text{=}\Omega 
+\end{equation*}
+\textcyrillic{где } $\Omega $–$\text{\textgreek{«}}$\textcyrillic{омут$\text{\textgreek{»}}$, }
+${\oplus}$–\textcyrillic{оператор слияния (в терминах ПМО – модусная сумма, см. Моисеев, 2004: 222). }
+
+\textcyrillic{Но:}
+
+\begin{equation*}
+{\forall}t_{\text{\textcyrillic{конечное}}}:Y\acute Z_{\text{\textcyrillic{гнозис}}}(t){\cap}Y\acute
+Z_{\text{\textcyrillic{прагм}}}(t)\text{=}{\emptyset}
+\end{equation*}
+\textcyrillic{Слияние отложено до эсхатона, до $\text{\textgreek{«}}$последнего предела$\text{\textgreek{»}}$. В
+исторической реальности (конечное } $t$) \textcyrillic{слияния нет.}
+
+\subsubsection[\textcyrillic{В} \textcyrillic{т}\textcyrillic{а}\textcyrillic{к}\textcyrillic{о}\textcyrillic{м}
+\textcyrillic{к}\textcyrillic{о}\textcyrillic{н}\textcyrillic{т}\textcyrillic{е}\textcyrillic{к}\textcyrillic{с}\textcyrillic{т}\textcyrillic{е}
+\textcyrillic{о}\textcyrillic{б}\textcyrillic{р}\textcyrillic{а}\textcyrillic{з}
+\textcyrillic{С}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ь}\textcyrillic{ё}\textcyrillic{в}\textcyrillic{а}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{е}\textcyrillic{д}\textcyrillic{л}\textcyrillic{а}\textcyrillic{г}\textcyrillic{а}\textcyrillic{е}\textcyrillic{т}\textcyrillic{с}\textcyrillic{я}
+\textcyrillic{М}\textcyrillic{е}\textcyrillic{р}\textcyrillic{е}\textcyrillic{ж}\textcyrillic{к}\textcyrillic{о}\textcyrillic{в}\textcyrillic{с}\textcyrillic{к}\textcyrillic{и}\textcyrillic{м}
+\textcyrillic{к}\textcyrillic{а}\textcyrillic{к}
+\textcyrillic{ф}\textcyrillic{и}\textcyrillic{г}\textcyrillic{у}\textcyrillic{р}\textcyrillic{а}
+\textcyrillic{н}\textcyrillic{е}\textcyrillic{с}\textcyrillic{б}\textcyrillic{ы}\textcyrillic{в}\textcyrillic{ш}\textcyrillic{е}\textcyrillic{г}\textcyrillic{о}\textcyrillic{с}\textcyrillic{я}
+… \textcyrillic{о}\textcyrillic{м}\textcyrillic{у}\textcyrillic{т}\textcyrillic{а}]{\textcyrillic{В таком контексте
+образ Соловьёва предлагается Мережковским как фигура несбывшегося … омута}}
+\subsubsection[]{
+\includegraphics[width=4.995cm,height=3.33cm]{D09FD180D0BED0B5D0BAD182D0B8D0B2D0BDD0BE-img/D09FD180D0BED0B5D0BAD182D0B8D0B2D0BDD0BE-img001.png}
+}
+\textcyrillic{Таким образом, по Мережковскому трагедия Соловьёва как пророка немого, неслышимого, не звучащего, в том,
+что он существует} \textcyrillic{до }\textcyrillic{омута. }
+
+\textcyrillic{Текстовые маркеры:}
+
+$\text{\textgreek{«}}$\textcyrillic{До этого} \textcyrillic{предстоит им исчерпать все мыслимые
+противоречия$\text{\textgreek{»}}$.}
+
+\textcyrillic{Соловьёв исчерпывает противоречия, но не достигает синтеза. Он словно застревает в раздвоении, не достигая
+единства и умирает }\textcyrillic{до слияния}: $\text{\textgreek{«}}$\textcyrillic{умер, как
+безумец$\text{\textgreek{»}}$.}
+
+\textcyrillic{Финальная формализация:}
+
+\textcyrillic{Пусть } $\Omega $–\textcyrillic{оператор слияния в омуте. Тогда: }
+
+\begin{equation*}
+\Omega (X_{\text{\textcyrillic{гнозис}}},X_{\text{\textcyrillic{прагм}}})\text{=}Y_{\text{\textcyrillic{целостный}}}
+\end{equation*}
+\textcyrillic{Но для Соловьёва:}
+
+\begin{equation*}
+\Omega (X_{\text{\textcyrillic{явное}}},X_{\text{\textcyrillic{тайное}}})\text{=}\text{undefined}\text{
+\textcyrillic{при }}t\text{=}t_{\text{\textcyrillic{смерть}}}
+\end{equation*}
+\subsection[]{\selectlanguage{russian} }
+\subsection[\textcyrillic{Т}\textcyrillic{р}\textcyrillic{а}\textcyrillic{г}\textcyrillic{е}\textcyrillic{д}\textcyrillic{и}\textcyrillic{я}
+$\text{\textgreek{«}}$\textcyrillic{н}\textcyrillic{е}\textcyrillic{м}\textcyrillic{о}\textcyrillic{т}\textcyrillic{ы}$\text{\textgreek{»}}$
+\textcyrillic{к}\textcyrillic{а}\textcyrillic{к}
+\textcyrillic{о}\textcyrillic{н}\textcyrillic{т}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{г}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{а}\textcyrillic{я}
+\textcyrillic{а}\textcyrillic{п}\textcyrillic{о}\textcyrillic{р}\textcyrillic{и}\textcyrillic{я}]{\textcyrillic{Трагедия
+$\text{\textgreek{«}}$немоты$\text{\textgreek{»}}$ как онтологическая апория}}
+\textcyrillic{Немой пророк$\text{\textgreek{»}}$ – оксюморонное сочетание, содержащее структурный код трагедии:}
+
+\begin{itemize}
+\item \textcyrillic{Пророк} = \textcyrillic{обладатель профетического знания (модус)}
+\item \textcyrillic{Немой} = \textcyrillic{неспособность к артикуляции (блокировка проектора)}
+\end{itemize}
+\textcyrillic{Формализация:}
+
+\begin{equation*}
+\acute{\pi }(\text{\textcyrillic{профетическое знание}},Z_{\text{\textcyrillic{дискурс}}})\text{=}{\emptyset}
+\end{equation*}
+\textcyrillic{Проектор не может образовать моду профетического в модели дискурсивности.}
+
+\subsubsection[]{\selectlanguage{russian} }
+\subsubsection[\textcyrillic{Е}\textcyrillic{щ}\textcyrillic{е} \textcyrillic{р}\textcyrillic{а}\textcyrillic{з}
+\textcyrillic{о}\textcyrillic{б}\textcyrillic{о}\textcyrillic{з}\textcyrillic{н}\textcyrillic{а}\textcyrillic{ч}\textcyrillic{и}\textcyrillic{м}
+\textcyrillic{о}\textcyrillic{п}\textcyrillic{п}\textcyrillic{о}\textcyrillic{з}\textcyrillic{и}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{ю}
+\textcyrillic{г}\textcyrillic{о}\textcyrillic{в}\textcyrillic{о}\textcyrillic{р}\textcyrillic{е}\textcyrillic{н}\textcyrillic{и}\textcyrillic{я}
+/
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{л}\textcyrillic{ч}\textcyrillic{а}\textcyrillic{н}\textcyrillic{и}\textcyrillic{я}
+\textcyrillic{к}\textcyrillic{а}\textcyrillic{к}
+\textcyrillic{с}\textcyrillic{о}\textcyrillic{п}\textcyrillic{у}\textcyrillic{т}\textcyrillic{с}\textcyrillic{т}\textcyrillic{в}\textcyrillic{у}\textcyrillic{ю}\textcyrillic{щ}\textcyrillic{у}\textcyrillic{ю}
+\textcyrillic{д}\textcyrillic{е}\textcyrillic{я}\textcyrillic{т}\textcyrillic{е}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{н}\textcyrillic{о}\textcyrillic{с}\textcyrillic{т}\textcyrillic{н}\textcyrillic{о}\textcyrillic{с}\textcyrillic{т}\textcyrillic{и}
+/
+\textcyrillic{с}\textcyrillic{о}\textcyrillic{з}\textcyrillic{е}\textcyrillic{р}\textcyrillic{ц}\textcyrillic{а}\textcyrillic{т}\textcyrillic{е}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{н}\textcyrillic{о}\textcyrillic{с}\textcyrillic{т}\textcyrillic{и}]{\textcyrillic{Еще
+раз обозначим оппозицию говорения / молчания как сопутствующую деятельностности / созерцательности}}
+\textcyrillic{Текстовые маркеры:}
+
+$\text{\textgreek{«}}$\textcyrillic{Об этой революции говорит уже не философ десятью томами, а }\textcyrillic{немыми
+знаками} \textcyrillic{немой пророк$\text{\textgreek{»}}$. }
+
+\subsubsection[]{
+\includegraphics[width=5.782cm,height=3.856cm]{D09FD180D0BED0B5D0BAD182D0B8D0B2D0BDD0BE-img/D09FD180D0BED0B5D0BAD182D0B8D0B2D0BDD0BE-img002.png}
+}
+\subsubsection[\textcyrillic{Т}\textcyrillic{а}\textcyrillic{к}\textcyrillic{и}\textcyrillic{м}
+\textcyrillic{о}\textcyrillic{б}\textcyrillic{р}\textcyrillic{а}\textcyrillic{з}\textcyrillic{о}\textcyrillic{м},
+\textcyrillic{в}\textcyrillic{ы}\textcyrillic{в}\textcyrillic{о}\textcyrillic{д}\textcyrillic{и}\textcyrillic{м}
+\textcyrillic{ф}\textcyrillic{и}\textcyrillic{н}\textcyrillic{а}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{н}\textcyrillic{у}\textcyrillic{ю}
+\textcyrillic{ф}\textcyrillic{о}\textcyrillic{р}\textcyrillic{м}\textcyrillic{у}\textcyrillic{л}\textcyrillic{у}
+\textcyrillic{т}\textcyrillic{р}\textcyrillic{а}\textcyrillic{г}\textcyrillic{е}\textcyrillic{д}\textcyrillic{и}\textcyrillic{и}
+\textcyrillic{С}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ь}\textcyrillic{е}\textcyrillic{в}\textcyrillic{а}
+\textcyrillic{к}\textcyrillic{а}\textcyrillic{к}
+\textcyrillic{н}\textcyrillic{е}\textcyrillic{м}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{о}\textcyrillic{р}\textcyrillic{о}\textcyrillic{к}\textcyrillic{а}
+\textcyrillic{п}\textcyrillic{о}
+\textcyrillic{в}\textcyrillic{е}\textcyrillic{р}\textcyrillic{с}\textcyrillic{и}\textcyrillic{и}
+\textcyrillic{М}\textcyrillic{е}\textcyrillic{р}\textcyrillic{е}\textcyrillic{ж}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{в}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}:]{\textcyrillic{Таким
+образом, выводим финальную формулу трагедии Соловьева как немого пророка по версии Мережсковского:}}
+\subsubsection[]{\selectlanguage{russian} }
+\begin{equation*}
+\text{$\text{\textgreek{«}}$\textcyrillic{Немой пророк$\text{\textgreek{»}}$}}\text{=}\lim \underset{X\rightarrow
+X_{\text{\textcyrillic{истина}}}}{\text{[2061?]}}\frac{\text{\textcyrillic{Выразимость}}(X)}{\text{\textcyrillic{Истинность}}(X)}\text{=}0
+\end{equation*}
+
+\bigskip
+
+\textcyrillic{Чем ближе к профетической истине, тем меньше возможность выражения. Предел –абсолютная немота при
+абсолютной истинности.}
+
+\textcyrillic{Или в терминах ПМО:}
+
+\subsection[]{
+\includegraphics[width=3.602cm,height=3.602cm]{D09FD180D0BED0B5D0BAD182D0B8D0B2D0BDD0BE-img/D09FD180D0BED0B5D0BAD182D0B8D0B2D0BDD0BE-img003.png}
+}
+\subsection[\textcyrillic{В}\textcyrillic{ы}\textcyrillic{в}\textcyrillic{о}\textcyrillic{д}\textcyrillic{ы}:]{\textcyrillic{Выводы:}}
+\subsection[\textcyrillic{П}\textcyrillic{о}\textcyrillic{л}\textcyrillic{н}\textcyrillic{а}\textcyrillic{я}
+\textcyrillic{П}\textcyrillic{М}\textcyrillic{О}{}-\textcyrillic{с}\textcyrillic{т}\textcyrillic{р}\textcyrillic{у}\textcyrillic{к}\textcyrillic{т}\textcyrillic{у}\textcyrillic{р}\textcyrillic{а}
+\textcyrillic{о}\textcyrillic{б}\textcyrillic{р}\textcyrillic{а}\textcyrillic{з}\textcyrillic{а}
+\textcyrillic{С}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ь}\textcyrillic{ё}\textcyrillic{в}\textcyrillic{а}:
+\textcyrillic{ф}\textcyrillic{о}\textcyrillic{р}\textcyrillic{м}\textcyrillic{а}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{н}\textcyrillic{а}\textcyrillic{я}
+\textcyrillic{с}\textcyrillic{х}\textcyrillic{е}\textcyrillic{м}\textcyrillic{а}]{\textcyrillic{Полная ПМО-структура
+образа Соловьёва: формальная схема}}
+\subsubsection[\textcyrillic{Б}\textcyrillic{а}\textcyrillic{з}\textcyrillic{о}\textcyrillic{в}\textcyrillic{а}\textcyrillic{я}
+\textcyrillic{о}\textcyrillic{н}\textcyrillic{т}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{г}\textcyrillic{и}\textcyrillic{я}]{\textcyrillic{Базовая
+онтология}}
+\textcyrillic{Модус: } $Y\text{=}\text{\textcyrillic{Соловьёв-гностик}}$
+
+\textcyrillic{Сущностные предикаты: }
+$\text{Pr}(Y)\text{=}\{\text{\textcyrillic{гнозис}},\text{\textcyrillic{рационализм}},\text{\textcyrillic{консервативность}},\text{\textcyrillic{реставраторство}}\}$
+
+\textcyrillic{Собственные модели:}
+$M(Y)\text{=}\{Z_{\text{\textcyrillic{прошл}}},Z_{\text{\textcyrillic{наст}}},Z_{\text{\textcyrillic{эсх}}}\}$
+
+\textcyrillic{Несобственная модель:} $Z_{\text{\textcyrillic{прагм}}}{\notin}M(Y)$
+
+\subsubsection[\textcyrillic{А}\textcyrillic{у}\textcyrillic{т}\textcyrillic{е}\textcyrillic{н}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{н}\textcyrillic{ы}\textcyrillic{е}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{ы} (\textcyrillic{н}\textcyrillic{а}
+\textcyrillic{с}\textcyrillic{о}\textcyrillic{б}\textcyrillic{с}\textcyrillic{т}\textcyrillic{в}\textcyrillic{е}\textcyrillic{н}\textcyrillic{н}\textcyrillic{ы}\textcyrillic{х}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{е}\textcyrillic{л}\textcyrillic{я}\textcyrillic{х})]{\textcyrillic{Аутентичные
+моды (на собственных моделях)}}
+\begin{equation*}
+X_1\text{=}Y\acute Z_{\text{\textcyrillic{прошл}}}\text{=}\text{$\text{\textgreek{«}}$\textcyrillic{реставратор, тайный
+славянофил$\text{\textgreek{»}}$}}
+\end{equation*}
+\begin{equation*}
+X_2\text{=}Y\acute Z_{\text{\textcyrillic{наст}}}\text{=}\text{$\text{\textgreek{«}}$\textcyrillic{консерватор,
+подпирающий валящееся$\text{\textgreek{»}}$}}
+\end{equation*}
+\begin{equation*}
+X_3\text{=}Y\acute Z_{\text{\textcyrillic{эсх}}}\text{=}\text{$\text{\textgreek{«}}$\textcyrillic{эсхатолог, пророк
+антихриста$\text{\textgreek{»}}$}}
+\end{equation*}
+\subsubsection[\textcyrillic{П}\textcyrillic{о}\textcyrillic{п}\textcyrillic{ы}\textcyrillic{т}\textcyrillic{к}\textcyrillic{а}
+\textcyrillic{н}\textcyrillic{е}\textcyrillic{а}\textcyrillic{у}\textcyrillic{т}\textcyrillic{е}\textcyrillic{н}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{н}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{м}\textcyrillic{о}\textcyrillic{д}\textcyrillic{ы}]{\textcyrillic{Попытка неаутентичной моды}}
+\begin{equation*}
+X_{\text{\textcyrillic{деятель}}}\text{=}\acute{\pi }(Y,Z_{\text{\textcyrillic{прагм}}})\text{=}{\emptyset}
+\end{equation*}
+\textcyrillic{Мода не образуется. Вместо неё возникает социальная маска:}
+
+\begin{equation*}
+X_{\text{\textcyrillic{маска}}}\text{=}(Y\acute
+Z_{\text{\textcyrillic{наст}}})\acute{\text{*}}(Z_{\text{\textcyrillic{публ}}})\text{=}\text{$\text{\textgreek{«}}$\textcyrillic{десять
+томов философии$\text{\textgreek{»}}$}}
+\end{equation*}
+\subsubsection[\textcyrillic{М}\textcyrillic{о}\textcyrillic{д}\textcyrillic{ы}
+\textcyrillic{в}\textcyrillic{т}\textcyrillic{о}\textcyrillic{р}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}
+\textcyrillic{п}\textcyrillic{о}\textcyrillic{р}\textcyrillic{я}\textcyrillic{д}\textcyrillic{к}\textcyrillic{а}:
+\textcyrillic{р}\textcyrillic{а}\textcyrillic{с}\textcyrillic{щ}\textcyrillic{е}\textcyrillic{п}\textcyrillic{л}\textcyrillic{е}\textcyrillic{н}\textcyrillic{и}\textcyrillic{е}
+\textcyrillic{п}\textcyrillic{о}
+\textcyrillic{э}\textcyrillic{п}\textcyrillic{и}\textcyrillic{с}\textcyrillic{т}\textcyrillic{е}\textcyrillic{м}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{г}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{о}\textcyrillic{с}\textcyrillic{и}]{\textcyrillic{Моды второго порядка: расщепление по эпистемологической
+оси}}
+\begin{equation*}
+X_{\text{\textcyrillic{тайное}}}\text{=}(Y\acute
+Z_{\text{\textcyrillic{гнозис}}})\acute{\text{*}}(Z_{\text{\textcyrillic{скрыт}}})\text{=}\text{$\text{\textgreek{«}}$\textcyrillic{немой
+пророк$\text{\textgreek{»}}$(истинно, невыразимо)}}
+\end{equation*}
+\begin{equation*}
+X_{\text{\textcyrillic{явное}}}\text{=}(Y\acute
+Z_{\text{\textcyrillic{гнозис}}})\acute{\text{*}}(Z_{\text{\textcyrillic{публ}}})\text{=}\text{$\text{\textgreek{«}}$\textcyrillic{десять
+томов$\text{\textgreek{»}}$(выражено, неистинно)}}
+\end{equation*}
+\subsubsection[\textcyrillic{Т}\textcyrillic{р}\textcyrillic{а}\textcyrillic{г}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{а}\textcyrillic{я}
+\textcyrillic{а}\textcyrillic{п}\textcyrillic{о}\textcyrillic{р}\textcyrillic{и}\textcyrillic{я}]{\textcyrillic{Трагическая
+апория}}
+\begin{equation*}
+\text{\textcyrillic{Немота}}\text{=}X_{\text{\textcyrillic{тайное}}}{\cap}X_{\text{\textcyrillic{явное}}}\text{=}{\emptyset}{\wedge}\Omega
+(X_{\text{\textcyrillic{тайн}}},X_{\text{\textcyrillic{явн}}})\text{=}\text{undefined}
+\end{equation*}
+\subsection[]{\selectlanguage{russian} }
+\subsection[\textcyrillic{Э}\textcyrillic{в}\textcyrillic{р}\textcyrillic{и}\textcyrillic{с}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{и}\textcyrillic{й}
+\textcyrillic{п}\textcyrillic{о}\textcyrillic{т}\textcyrillic{е}\textcyrillic{н}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{а}\textcyrillic{л}
+\textcyrillic{П}\textcyrillic{М}\textcyrillic{О} \textcyrillic{д}\textcyrillic{л}\textcyrillic{я}
+\textcyrillic{л}\textcyrillic{и}\textcyrillic{т}\textcyrillic{е}\textcyrillic{р}\textcyrillic{а}\textcyrillic{т}\textcyrillic{у}\textcyrillic{р}\textcyrillic{н}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{к}\textcyrillic{р}\textcyrillic{и}\textcyrillic{т}\textcyrillic{и}\textcyrillic{к}\textcyrillic{и}
+\textcyrillic{и}
+\textcyrillic{л}\textcyrillic{и}\textcyrillic{н}\textcyrillic{г}\textcyrillic{в}\textcyrillic{и}\textcyrillic{с}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}
+\textcyrillic{а}\textcyrillic{н}\textcyrillic{а}\textcyrillic{л}\textcyrillic{и}\textcyrillic{з}\textcyrillic{а}
+\textcyrillic{т}\textcyrillic{е}\textcyrillic{к}\textcyrillic{с}\textcyrillic{т}\textcyrillic{а}]{\textcyrillic{Эвристический
+потенциал ПМО для литературной критики и лингвистического анализа текста}}
+
+\bigskip
+
+\textcyrillic{Согласно В.И. Моисееву (2002) $\text{\textgreek{«}}$в истории философской логики присутствуют два проекта
+– формальной логики и некоторой {\textquotedbl}содержательной логики{\textquotedbl}, часто называемой
+{\textquotedbl}диалектикой{\textquotedbl}... Возможно, Проективно-модальная Онтология могла бы послужить выражением
+именно этой, более содержательной, линии развития философской логики$\text{\textgreek{»}}$.}
+
+\textcyrillic{Настоящее исследование демонстрирует, что }\textcyrillic{ПМО }\textcyrillic{применима} \textcyrillic{к
+литературно-критическому дискурсу }XX \textcyrillic{века. Экзистенциальное портретирование Мережковского оказывается
+систематической процедурой проективного варьирования модуса личности на множестве моделей.}
+
+\subsubsection[\textcyrillic{К}\textcyrillic{о}\textcyrillic{о}\textcyrillic{р}\textcyrillic{д}\textcyrillic{и}\textcyrillic{н}\textcyrillic{и}\textcyrillic{р}\textcyrillic{у}\textcyrillic{я}
+\textcyrillic{п}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{ж}\textcyrillic{е}\textcyrillic{н}\textcyrillic{и}\textcyrillic{я}
+\textcyrillic{П}\textcyrillic{М}\textcyrillic{О} \textcyrillic{с}
+\textcyrillic{э}\textcyrillic{т}\textcyrillic{а}\textcyrillic{п}\textcyrillic{а}\textcyrillic{м}\textcyrillic{и}
+\textcyrillic{л}\textcyrillic{и}\textcyrillic{н}\textcyrillic{г}\textcyrillic{в}\textcyrillic{о}\textcyrillic{р}\textcyrillic{и}\textcyrillic{т}\textcyrillic{о}\textcyrillic{р}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}
+\textcyrillic{а}\textcyrillic{н}\textcyrillic{а}\textcyrillic{л}\textcyrillic{и}\textcyrillic{з}\textcyrillic{а}
+\textcyrillic{т}\textcyrillic{е}\textcyrillic{к}\textcyrillic{с}\textcyrillic{т}\textcyrillic{а},
+\textcyrillic{н}\textcyrillic{а}\textcyrillic{х}\textcyrillic{о}\textcyrillic{д}\textcyrillic{и}\textcyrillic{м},
+\textcyrillic{ч}\textcyrillic{т}\textcyrillic{о}
+\textcyrillic{П}\textcyrillic{М}\textcyrillic{О}{}-\textcyrillic{с}\textcyrillic{т}\textcyrillic{р}\textcyrillic{у}\textcyrillic{к}\textcyrillic{т}\textcyrillic{у}\textcyrillic{р}\textcyrillic{а}
+\textcyrillic{о}\textcyrillic{к}\textcyrillic{а}\textcyrillic{з}\textcyrillic{ы}\textcyrillic{в}\textcyrillic{а}\textcyrillic{е}\textcyrillic{т}\textcyrillic{с}\textcyrillic{я}
+\textcyrillic{и}\textcyrillic{з}\textcyrillic{о}\textcyrillic{м}\textcyrillic{о}\textcyrillic{р}\textcyrillic{ф}\textcyrillic{н}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{А}\textcyrillic{С}\textcyrillic{П}{}-\textcyrillic{с}\textcyrillic{т}\textcyrillic{р}\textcyrillic{у}\textcyrillic{к}\textcyrillic{т}\textcyrillic{у}\textcyrillic{р}\textcyrillic{е}
+$\text{\textgreek{«}}$\textcyrillic{ф}\textcyrillic{и}\textcyrillic{л}\textcyrillic{о}\textcyrillic{с}\textcyrillic{о}\textcyrillic{ф}{}-\textcyrillic{с}\textcyrillic{о}\textcyrillic{з}\textcyrillic{е}\textcyrillic{р}\textcyrillic{ц}\textcyrillic{а}\textcyrillic{т}\textcyrillic{е}\textcyrillic{л}\textcyrillic{ь}$\text{\textgreek{»}}$,
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{е}\textcyrillic{д}\textcyrillic{с}\textcyrillic{т}\textcyrillic{а}\textcyrillic{в}\textcyrillic{л}\textcyrillic{е}\textcyrillic{н}\textcyrillic{н}\textcyrillic{о}\textcyrillic{й}
+\textcyrillic{л}\textcyrillic{е}\textcyrillic{к}\textcyrillic{с}\textcyrillic{е}\textcyrillic{м}\textcyrillic{а}\textcyrillic{м}\textcyrillic{и}
+\textcyrillic{и}
+\textcyrillic{с}\textcyrillic{л}\textcyrillic{о}\textcyrillic{в}\textcyrillic{о}\textcyrillic{с}\textcyrillic{о}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{т}\textcyrillic{а}\textcyrillic{н}\textcyrillic{и}\textcyrillic{я}\textcyrillic{м}\textcyrillic{и},
+\textcyrillic{а}\textcyrillic{к}\textcyrillic{т}\textcyrillic{у}\textcyrillic{а}\textcyrillic{л}\textcyrillic{и}\textcyrillic{з}\textcyrillic{и}\textcyrillic{р}\textcyrillic{у}\textcyrillic{ю}\textcyrillic{щ}\textcyrillic{и}\textcyrillic{м}\textcyrillic{и}
+\textcyrillic{к}\textcyrillic{о}\textcyrillic{н}\textcyrillic{ц}\textcyrillic{е}\textcyrillic{п}\textcyrillic{т}
+$\text{\textgreek{«}}$\textcyrillic{с}\textcyrillic{к}\textcyrillic{р}\textcyrillic{ы}\textcyrillic{т}\textcyrillic{о}\textcyrillic{с}\textcyrillic{т}\textcyrillic{и}$\text{\textgreek{»}}$:
+\textcyrillic{с}\textcyrillic{о}\textcyrillic{з}\textcyrillic{е}\textcyrillic{р}\textcyrillic{ц}\textcyrillic{а}\textcyrillic{н}\textcyrillic{и}\textcyrillic{е}
+(\textcyrillic{ф}\textcyrillic{и}\textcyrillic{л}\textcyrillic{о}\textcyrillic{с}\textcyrillic{о}\textcyrillic{ф}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{е},
+\textcyrillic{м}\textcyrillic{и}\textcyrillic{с}\textcyrillic{т}\textcyrillic{и}\textcyrillic{ч}\textcyrillic{е}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{е}),
+\textcyrillic{п}\textcyrillic{о}\textcyrillic{г}\textcyrillic{р}\textcyrillic{у}\textcyrillic{ж}\textcyrillic{е}\textcyrillic{н}\textcyrillic{н}\textcyrillic{о}\textcyrillic{с}\textcyrillic{т}\textcyrillic{ь}
+\textcyrillic{в}
+\textcyrillic{и}\textcyrillic{д}\textcyrillic{е}\textcyrillic{а}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{н}\textcyrillic{о}\textcyrillic{е},
+\textcyrillic{б}\textcyrillic{е}\textcyrillic{з}\textcyrillic{у}\textcyrillic{м}\textcyrillic{н}\textcyrillic{а}\textcyrillic{я}
+\textcyrillic{в}\textcyrillic{л}\textcyrillic{ю}\textcyrillic{б}\textcyrillic{л}\textcyrillic{е}\textcyrillic{н}\textcyrillic{н}\textcyrillic{о}\textcyrillic{с}\textcyrillic{т}\textcyrillic{ь}
+\textcyrillic{в}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{о}\textcyrillic{ш}\textcyrillic{л}\textcyrillic{о}\textcyrillic{е}
+(\textcyrillic{к}\textcyrillic{а}\textcyrillic{к} \textcyrillic{у}\textcyrillic{ж}\textcyrillic{е}
+\textcyrillic{н}\textcyrillic{е}\textcyrillic{д}\textcyrillic{о}\textcyrillic{с}\textcyrillic{т}\textcyrillic{у}\textcyrillic{п}\textcyrillic{н}\textcyrillic{о}\textcyrillic{е}),
+\textcyrillic{р}\textcyrillic{о}\textcyrillic{з}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ы}\textcyrillic{й}
+\textcyrillic{б}\textcyrillic{а}\textcyrillic{ш}\textcyrillic{м}\textcyrillic{а}\textcyrillic{ч}\textcyrillic{о}\textcyrillic{к}
+(\textcyrillic{с}\textcyrillic{и}\textcyrillic{м}\textcyrillic{в}\textcyrillic{о}\textcyrillic{л}
+\textcyrillic{ф}\textcyrillic{и}\textcyrillic{к}\textcyrillic{с}\textcyrillic{а}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{и}
+\textcyrillic{н}\textcyrillic{а}
+\textcyrillic{н}\textcyrillic{е}\textcyrillic{в}\textcyrillic{о}\textcyrillic{з}\textcyrillic{в}\textcyrillic{р}\textcyrillic{а}\textcyrillic{т}\textcyrillic{и}\textcyrillic{м}\textcyrillic{о}\textcyrillic{м}),
+\textcyrillic{п}\textcyrillic{о}\textcyrillic{д}\textcyrillic{п}\textcyrillic{о}\textcyrillic{л}\textcyrillic{ь}\textcyrillic{е},
+\textcyrillic{т}\textcyrillic{а}\textcyrillic{й}\textcyrillic{н}\textcyrillic{а},
+\textcyrillic{в}\textcyrillic{н}\textcyrillic{у}\textcyrillic{т}\textcyrillic{р}\textcyrillic{е}\textcyrillic{н}\textcyrillic{н}\textcyrillic{и}\textcyrillic{й}
+\textcyrillic{м}\textcyrillic{и}\textcyrillic{р},
+\textcyrillic{н}\textcyrillic{е}\textcyrillic{д}\textcyrillic{о}\textcyrillic{с}\textcyrillic{т}\textcyrillic{у}\textcyrillic{п}\textcyrillic{н}\textcyrillic{ы}\textcyrillic{й}
+\textcyrillic{в}\textcyrillic{н}\textcyrillic{е}\textcyrillic{ш}\textcyrillic{н}\textcyrillic{е}\textcyrillic{м}\textcyrillic{у}
+\textcyrillic{н}\textcyrillic{а}\textcyrillic{б}\textcyrillic{л}\textcyrillic{ю}\textcyrillic{д}\textcyrillic{е}\textcyrillic{н}\textcyrillic{и}\textcyrillic{ю}.]{\textcyrillic{Координируя
+положения ПМО с этапами лингвориторического анализа текста, находим, что ПМО-структура оказывается изоморфной
+АСП-структуре $\text{\textgreek{«}}$философ-созерцатель$\text{\textgreek{»}}$, представленной лексемами и
+словосочетаниями, актуализирующими концепт $\text{\textgreek{«}}$скрытости$\text{\textgreek{»}}$: созерцание
+(философское, мистическое), погруженность в идеальное, безумная влюбленность в прошлое (как уже недоступное), розовый
+башмачок (символ фиксации на невозвратимом), подполье, тайна, внутренний мир, недоступный внешнему наблюдению.}}
+\subsubsection[]{\selectlanguage{russian} }
+
+\includegraphics[width=5.715cm,height=3.81cm]{D09FD180D0BED0B5D0BAD182D0B8D0B2D0BDD0BE-img/D09FD180D0BED0B5D0BAD182D0B8D0B2D0BDD0BE-img004.png}
+
+
+\textcyrillic{ПМО обеспечивает формальный метаязык для структур, описанных лингвориторическим анализом на естественном
+языке.}
+
+\subsubsection[]{\selectlanguage{russian} }
+\subsubsection[\textcyrillic{К}\textcyrillic{р}\textcyrillic{о}\textcyrillic{м}\textcyrillic{е}
+\textcyrillic{т}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о},
+\textcyrillic{а}\textcyrillic{п}\textcyrillic{п}\textcyrillic{а}\textcyrillic{р}\textcyrillic{а}\textcyrillic{т}
+\textcyrillic{П}\textcyrillic{М}\textcyrillic{О}
+\textcyrillic{п}\textcyrillic{о}\textcyrillic{з}\textcyrillic{в}\textcyrillic{о}\textcyrillic{л}\textcyrillic{я}\textcyrillic{е}\textcyrillic{т}
+\textcyrillic{т}\textcyrillic{о}\textcyrillic{ч}\textcyrillic{н}\textcyrillic{о}
+\textcyrillic{д}\textcyrillic{и}\textcyrillic{а}\textcyrillic{г}\textcyrillic{н}\textcyrillic{о}\textcyrillic{с}\textcyrillic{т}\textcyrillic{и}\textcyrillic{р}\textcyrillic{о}\textcyrillic{в}\textcyrillic{а}\textcyrillic{т}\textcyrillic{ь}
+\textcyrillic{п}\textcyrillic{р}\textcyrillic{и}\textcyrillic{р}\textcyrillic{о}\textcyrillic{д}\textcyrillic{у}
+\textcyrillic{т}\textcyrillic{р}\textcyrillic{а}\textcyrillic{г}\textcyrillic{е}\textcyrillic{д}\textcyrillic{и}\textcyrillic{и}
+\textcyrillic{С}\textcyrillic{о}\textcyrillic{л}\textcyrillic{о}\textcyrillic{в}\textcyrillic{ь}\textcyrillic{ё}\textcyrillic{в}\textcyrillic{а}
+\textcyrillic{у}
+\textcyrillic{М}\textcyrillic{е}\textcyrillic{р}\textcyrillic{е}\textcyrillic{ж}\textcyrillic{к}\textcyrillic{о}\textcyrillic{в}\textcyrillic{с}\textcyrillic{к}\textcyrillic{о}\textcyrillic{г}\textcyrillic{о}:]{\textcyrillic{Кроме
+того, аппарат ПМО позволяет точно диагностировать природу трагедии Соловьёва у Мережковского:}}
+\textcyrillic{Апория 1: Несовпадение модуса и эпохи}
+
+\textcyrillic{Модус-гностик существует в эпоху, требующую модуса-прагматика:}
+
+\begin{equation*}
+Y_{\text{\textcyrillic{требуемый}}}\text{=}\text{\textcyrillic{Прагматик}}{\neq}Y_{\text{\textcyrillic{актуальный}}}\text{=}\text{\textcyrillic{Гностик}}
+\end{equation*}
+\textcyrillic{Апория 2: Блокировка проектора}
+
+\begin{equation*}
+Z_{\text{\textcyrillic{прагм}}}{\notin}M(Y)\Rightarrow \acute{\pi
+}(Y,Z_{\text{\textcyrillic{прагм}}})\text{=}{\emptyset}
+\end{equation*}
+\textcyrillic{Структурная невозможность революционного действия.}
+
+\textcyrillic{Апория 3: Расщепление мод}
+
+\begin{equation*}
+X_{\text{\textcyrillic{аутентичное}}}\text{ (\textcyrillic{пророк)
+невыразимо}}{\wedge}X_{\text{\textcyrillic{выраженное}}}\text{ (\textcyrillic{философ)
+}}\text{\textcyrillic{неаутентично}}
+\end{equation*}
+\subsubsection[\textcyrillic{С}\textcyrillic{р}\textcyrillic{а}\textcyrillic{в}\textcyrillic{н}\textcyrillic{е}\textcyrillic{н}\textcyrillic{и}\textcyrillic{е}
+\textcyrillic{с}
+\textcyrillic{а}\textcyrillic{н}\textcyrillic{а}\textcyrillic{л}\textcyrillic{и}\textcyrillic{з}\textcyrillic{о}\textcyrillic{м}
+$\text{\textgreek{«}}$\textcyrillic{П}\textcyrillic{а}\textcyrillic{р}\textcyrillic{м}\textcyrillic{е}\textcyrillic{н}\textcyrillic{и}\textcyrillic{д}\textcyrillic{а}$\text{\textgreek{»}}$
+\textcyrillic{у}
+\textcyrillic{М}\textcyrillic{о}\textcyrillic{и}\textcyrillic{с}\textcyrillic{е}\textcyrillic{е}\textcyrillic{в}\textcyrillic{а}]{\textcyrillic{Сравнение
+с анализом $\text{\textgreek{«}}$Парменида$\text{\textgreek{»}}$ у Моисеева}}
+\textcyrillic{Моисеев (2002: 222) анализирует $\text{\textgreek{«}}$Парменид$\text{\textgreek{»}}$ Платона как систему
+восьми мод второго порядка, образованных варьированием идеи Единого по базовым модам (бытие/небытие) и эпимодам
+(рефлексивная/трансфлексивная).}
+
+\textcyrillic{Структурная аналогия:}
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{6.214cm}|m{9.799cm}|}
+\hline
+{\selectlanguage{english} $\text{\textgreek{«}}$\textcyrillic{Парменид$\text{\textgreek{»}}$ (Моисеев)}} &
+{\selectlanguage{english} $\text{\textgreek{«}}$\textcyrillic{Немой пророк$\text{\textgreek{»}}$ (настоящее
+иссл.)}}\\\hline
+{\selectlanguage{english} \textcyrillic{Идея Единого (модус)}} &
+{\selectlanguage{english} \textcyrillic{Соловьёв-гностик (модус)}}\\\hline
+{\selectlanguage{english} \textcyrillic{Бытие/небытие (базовые моды)}} &
+{\selectlanguage{english} \textcyrillic{Гнозис/прагматизм (базовые условия)}}\\\hline
+{\selectlanguage{english} \textcyrillic{Рефлексивная эпимода (} $E\acute E$) } &
+{\selectlanguage{english} \textcyrillic{Созерцание (} $Y\acute Y$) }\\\hline
+{\selectlanguage{english} \textcyrillic{Трансфлексивная эпимода (} $E\acute M$) } &
+{\selectlanguage{english} \textcyrillic{Попытка деятельности (} $Y\acute{\lnot Y}$) }\\\hline
+{\selectlanguage{english} 8 \textcyrillic{мод второго порядка}} &
+{\selectlanguage{english} \textcyrillic{Темпоральная триада + расщепление}}\\\hline
+\end{supertabular}
+\end{flushleft}
+\textcyrillic{Критическое различие:}
+
+\textcyrillic{У Платона (по Моисееву) }\textcyrillic{все моды образуются} (\textcyrillic{трансфлексивные →
+пан-выразимость, рефлексивные → невыразимость). У Мережковского одна из базовых мод (прагматизм) }\textcyrillic{не
+образуется вовсе} ( ${\emptyset}$), \textcyrillic{что порождает трагедию. }
+
+
+\bigskip
+
+\textcyrillic{Заключение}
+
+\textcyrillic{Применение аппарата Проективно-модальной онтологии В.И. Моисеева к анализу образа В.С. Соловьёва в
+критической статье Д.С. Мережковского $\text{\textgreek{«}}$Немой пророк$\text{\textgreek{»}}$ позволило:}
+
+\begin{enumerate}
+\item \textcyrillic{Формализовать базовый модус} \textcyrillic{не как нейтральный субъект, но как имманентно
+гностический (созерцательный), что делает революционный прагматизм }\textcyrillic{несобственной моделью}.
+\item \textcyrillic{Выявить темпоральную архитектонику} \textcyrillic{образа через триаду собственных моделей: прошлое
+(реставраторство), настоящее (консервация), эсхатологическое будущее (страх антихриста).}
+\item \textcyrillic{Скорректировать понимание $\text{\textgreek{«}}$омута$\text{\textgreek{»}}$} \textcyrillic{не как
+актуального синтеза, но как }\textcyrillic{эсхатологического предельного перехода}, \textcyrillic{недостижимого в
+конечном времени: } $\lim \text{[2061?]}_{t\rightarrow {\infty}}\Omega
+(X_{\text{\textcyrillic{гнозис}}},X_{\text{\textcyrillic{прагм}}})$. 
+\item \textcyrillic{Формализовать трагедию $\text{\textgreek{«}}$немоты$\text{\textgreek{»}}$} \textcyrillic{как
+онтологическую апорию: }
+$X_{\text{\textcyrillic{истинное}}}{\cap}X_{\text{\textcyrillic{выраженное}}}\text{=}{\emptyset}$, \textcyrillic{где
+профетическая истина структурно невыразима в публичном дискурсе. }
+\item \textcyrillic{Диагностировать три типа онтологических апорий}: \textcyrillic{несовпадение модуса и эпохи,
+блокировка проектора на несобственной модели, расщепление аутентичной и неаутентичной мод.}
+\end{enumerate}
+\textcyrillic{Экзистенциальное портретирование} = \textcyrillic{систематическое проективное варьирование}
+\textcyrillic{модуса личности:}
+
+\begin{itemize}
+\item \textcyrillic{Фиксация модуса (Соловьёв-гностик)}
+\item \textcyrillic{Определение собственных моделей (}
+$Z_{\text{\textcyrillic{прошл}}},Z_{\text{\textcyrillic{наст}}},Z_{\text{\textcyrillic{эсх}}}$) 
+\item \textcyrillic{Выявление несобственных моделей (} $Z_{\text{\textcyrillic{прагм}}}$) 
+\item \textcyrillic{Образование аутентичных мод (} $X_1,X_2,X_3$) 
+\item \textcyrillic{Фиксация блокировки проектора (} $\acute{\pi
+}(Y,Z_{\text{\textcyrillic{прагм}}})\text{=}{\emptyset}$) 
+\item \textcyrillic{Локализация онтологических апорий (расщепление, немота)}
+\item \textcyrillic{Философская интерпретация (трагедия несбывшегося синтеза)}
+\end{itemize}
+
+\bigskip
+
+
+\bigskip
+
+\textcyrillic{Экзистенциальное портретирование Мережковского реконструировано как систематическая процедура проективного
+варьирования, изоморфная методу античной диалектики. Предложен формальный метаязык для описания концептуальных
+структур, выявленных лингвориторическим анализом. ПМО обеспечивает координацию макрологики (АСП, концепты) и
+микрологики (риторические приёмы) критического текста.}
+
+\subsection[]{\selectlanguage{russian} }
+\subsection[\textcyrillic{Л}\textcyrillic{и}\textcyrillic{т}\textcyrillic{е}\textcyrillic{р}\textcyrillic{а}\textcyrillic{т}\textcyrillic{у}\textcyrillic{р}\textcyrillic{а}]{\textcyrillic{Литература}}
+\begin{enumerate}
+\item \textcyrillic{Белый, А. (1994). Воспоминания о Блоке. }\textcyrillic{Александр Блок в воспоминаниях
+современников}. \textcyrillic{М.: Художественная литература. (Оригинальная работа опубликована в 1907).}
+\item \textcyrillic{Блок, А. (1980). Рыцарь-монах. }\textcyrillic{Собрание сочинений в 8 томах. Т. 5}. \textcyrillic{М.:
+Художественная литература. (Оригинальная работа опубликована в 1906).}
+\item \textcyrillic{Луговская, Е.Г., Грудина, Е.К. (2025). Экзистенциальное портретирование как критический метод:
+лингвориторический анализ статьи Д.С. Мережковского $\text{\textgreek{«}}$Немой пророк$\text{\textgreek{»}}$ (в
+печати). }
+\item \textcyrillic{Мережковский, Д.С. (1914). Немой пророк. }\textcyrillic{Полное собрание сочинений. Т. 16}.
+\textcyrillic{М.: Издание И.Д. Сытина. С. 128–135. (Оригинальная работа опубликована в 1908).}
+\item \textcyrillic{Моисеев, В.И. (2002). Логика всеединства. }
+\item \textcyrillic{Моисеев, В.И. (2004). Проективно-модальная онтология и некоторые её приложения.
+}\textcyrillic{Логические исследования. Вып. 11}. \textcyrillic{М.: Наука. С. 215–229.}
+https://iphras.ru/uplfile/logic/log11/Li\_11\_Moiseev.pdf
+\end{enumerate}
+\subsection[]{\selectlanguage{russian} }
+\subsection[\textcyrillic{П}\textcyrillic{р}\textcyrillic{и}\textcyrillic{л}\textcyrillic{о}\textcyrillic{ж}\textcyrillic{е}\textcyrillic{н}\textcyrillic{и}\textcyrillic{е}:
+\textcyrillic{Н}\textcyrillic{о}\textcyrillic{т}\textcyrillic{а}\textcyrillic{ц}\textcyrillic{и}\textcyrillic{я}
+\textcyrillic{П}\textcyrillic{М}\textcyrillic{О} \textcyrillic{д}\textcyrillic{л}\textcyrillic{я}
+\textcyrillic{н}\textcyrillic{а}\textcyrillic{с}\textcyrillic{т}\textcyrillic{о}\textcyrillic{я}\textcyrillic{щ}\textcyrillic{е}\textcyrillic{г}\textcyrillic{о}
+\textcyrillic{и}\textcyrillic{с}\textcyrillic{с}\textcyrillic{л}\textcyrillic{е}\textcyrillic{д}\textcyrillic{о}\textcyrillic{в}\textcyrillic{а}\textcyrillic{н}\textcyrillic{и}\textcyrillic{я}]{\textcyrillic{Приложение:
+Нотация ПМО для настоящего исследования}}
+\textcyrillic{Базовые обозначения:}
+
+\begin{itemize}
+\item  $Y$–\textcyrillic{модус (источник бытия) }
+\item  $X$–\textcyrillic{мода (аспект, проявление) }
+\item  $Z$–\textcyrillic{модель (ограничивающее условие) }
+\item  $\acute{\pi }$–\textcyrillic{проектор (операция ограничения) }
+\item  $\acute{\sigma }$–\textcyrillic{сюръектор (операция расширения) }
+\item  $M(Y)$–\textcyrillic{множество собственных моделей модуса } $Y$
+\item  $X\text{=}Y\acute Z$–$\text{\textgreek{«}}$ $X$ \textcyrillic{есть } $Y${}-\textcyrillic{при-условии-}
+$Z$$\text{\textgreek{»}}$ 
+\end{itemize}
+\textcyrillic{Специальные обозначения:}
+
+\begin{itemize}
+\item  $Y\acute{\text{*}}Z$–\textcyrillic{мода второго порядка }
+\item  ${\oplus}$–\textcyrillic{оператор слияния (модусная сумма) }
+\item  $\Omega $–\textcyrillic{омут как оператор слияния }
+\item  ${\emptyset}$–\textcyrillic{пустая мода (не образуется) }
+\item  $\lim \text{[2061?]}_{t\rightarrow {\infty}}$–\textcyrillic{предельный переход к эсхатону }
+\end{itemize}
+\textcyrillic{Индексы:}
+
+\begin{itemize}
+\item  $Z_{\text{\textcyrillic{прошл}}}$–\textcyrillic{модель прошлого }
+\item  $Z_{\text{\textcyrillic{наст}}}$–\textcyrillic{модель настоящего }
+\item  $Z_{\text{\textcyrillic{эсх}}}$–\textcyrillic{модель эсхатологического будущего }
+\item  $Z_{\text{\textcyrillic{прагм}}}$–\textcyrillic{модель революционного прагматизма }
+\item  $Z_{\text{\textcyrillic{гнозис}}}$–\textcyrillic{модель созерцательного гнозиса }
+\item  $Z_{\text{\textcyrillic{публ}}}$–\textcyrillic{модель публичного дискурса }
+\item  $Z_{\text{\textcyrillic{скрыт}}}$–\textcyrillic{модель скрытого бытия }
+\end{itemize}
+
+\bigskip
+
+\textcyrillic{Настоящее примечание имеет целью эксплицировать методологическую границу между объектом исследования
+(образ Соловьёва в критической статье Мережковского) и референтом этого образа (историческая личность и философская
+система В.С. Соловьёва). Проведённая ПМО-реконструкция описывает концептуальную структуру }\textcyrillic{образа},
+\textcyrillic{а не претендует на исчерпывающую характеристику философии Соловьёва }\textcyrillic{как таковой}.
+\textcyrillic{Тем не менее, сопоставление выявленных структур с общепризнанными характеристиками соловьёвской мысли
+позволяет уточнить эвристические границы и возможные искажения критического метода Мережковского.}
+
+
+\bigskip
+
+\textcyrillic{Статья подготовлена в рамках деятельности Лаборатории Философии Слова Интегрального
+Сообщества}\ \ \ \ (Equation \stepcounter{Equation}{\theEquation})
+\end{document}
+
+
+\section*{Заключение}
+
+Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи Продолжение текста статьи 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{99}
+
+\bibitem{Singe}
+Синг Дж. 
+Общая теория относительности. 
+М.: ИЛ, 1963. С. 247--248 
+
+\bibitem{Zakh}
+Захаров В.Д. 
+Гравитационные волны в теории тяготения Эйнштейна (Современные проблемы физики). 
+М.: Наука, 1972. С. 119.
+
+\bibitem{Kennel1} 
+Kennel C.F., Petschek H.E. 
+Limit on stably trapped particle fluxes. 
+{\it J. Geophys. Res.} 1966. V. 71. № 1. 1--14~pp.
+
+\bibitem{Lyons2} 
+Lyons L.R., Williams D.J. 
+Quantitative aspects of magnetospheric physics. 
+N.Y.: Springer, 1984. 312 p.
+
+\bibitem{Nishida1} 
+Nishida A. Geomagnetic diagnosis of the magnetosphere. 
+N.Y.: Springer-Verlag, 1978. 301 p.
+
+\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{otherlanguage}{english}
+
+\begin{thebibliography}{99}
+
+\bibitem{Synge}
+Synge J.L. 
+{\it Relativity: The General Theory}. 
+Amsterdam: North-Holland Publishing Company, 1960.  
+
+%\bibitem{Zakh}
+Zakharov V.D. 
+{\it Gravitatsionnyye volny v teorii tyagoteniya Eynshteyna (Sovremennyye problemy fiziki)}. 
+Moscow: Nauka Publ., 1972. 119 p. (in Russ.)
+
+\bibitem{Kennel} 
+Kennel C.F., Petschek H.E. 
+Limit on stably trapped particle fluxes. 
+{\it J. Geophys. Res.}, 1966, vol. 71, no. 1, pp. 1--14.
+
+\bibitem{Lyons} 
+Lyons L.R., Williams D.J. 
+{\it Quantitative aspects of magnetospheric physics.} 
+N.Y.: Springer, 1984. 312 p.
+
+\bibitem{Nishida} 
+Nishida A. 
+{\it Geomagnetic diagnosis of the magnetosphere.} 
+N.Y.: Springer-Verlag, 1978. 301 p.
+
+
+\end{thebibliography}
+
+\vspace{10pt}
+\begin{otherlanguage}{russian}
+\Footer
+\end{otherlanguage}
+
+\vspace{10pt}
+\FooterSub
+\end{otherlanguage}
+
+
+
+\end{document}
+
